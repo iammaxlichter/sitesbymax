@@ -1003,7 +1003,7 @@ a {
 .plan:nth-child(2)::after {
   content: 'Most Popular';
   position: absolute;
-  top: -8px;
+  top: 8px;
   right: 16px;
   background: linear-gradient(135deg, var(--brand), #60a5fa);
   color: white;
