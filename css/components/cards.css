@@ -1,0 +1,106 @@
+/* =========================================
+   CARDS & CONTENT BLOCKS
+========================================= */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(77, 171, 247, 0.05), transparent);
+  transition: left 0.8s ease;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(77, 171, 247, .3);
+}
+
+.card h3 {
+  margin: 0 0 0.35rem;
+  font-size: var(--font-size-lg);
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: var(--brand);
+}
+
+.card p {
+  margin: 0;
+  margin-top: 1rem;
+  color: var(--muted);
+  transition: color 0.3s ease;
+}
+
+/* Hero Card */
+.hero-card {
+  background: linear-gradient(135deg, #fff, #f0faff);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.75rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Contact Card */
+.contact-card .divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 1rem 0;
+  animation: shimmer 2s linear infinite;
+  background-size: 200px 100%;
+}
+
+/* Enhanced hover effects for larger screens */
+@media (min-width: 900px) {
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@media (min-width: 1200px) {
+  .card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 30px 60px rgba(17, 24, 39, .2);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .hero-card {
+    background: linear-gradient(135deg, var(--surface), #334155);
+  }
+  
+  .hero-card .stat {
+    background: rgba(30, 41, 59, 0.8);
+  }
+  
+  .contact-card {
+    background: var(--surface);
+  }
+  
+  .divider {
+    opacity: 0.8;
+  }
+}

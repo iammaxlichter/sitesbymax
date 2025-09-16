@@ -1,0 +1,60 @@
+/* =========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+========================================= */
+
+:root {
+  /* Colors */
+  --bg: #f7fafc;
+  --surface: #fff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --brand: #4dabf7;
+  --brand-ink: #0b3d91;
+  --border: #e5e7eb;
+  --chip: #f3f4f6;
+
+  /* Spacing */
+  --container-width: 1100px;
+  --section-padding: 32px 0;
+  --card-padding: 1.1rem;
+  --border-radius: 16px;
+  --border-radius-sm: 12px;
+  --border-radius-lg: 20px;
+
+  /* Shadows */
+  --shadow: 0 10px 30px rgba(17, 24, 39, .08);
+  --shadow-lg: 0 20px 40px rgba(17, 24, 39, .15);
+  --shadow-button: 0 4px 14px rgba(0, 0, 0, .04);
+
+  /* Typography */
+  --font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.05rem;
+  --font-size-xl: 1.7rem;
+  --line-height: 1.6;
+
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
+  --transition-slow: all 0.8s ease;
+
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-modal: 9999;
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --border: #334155;
+    --chip: #334155;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, .4);
+  }
+}

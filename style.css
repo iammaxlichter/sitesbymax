@@ -1726,9 +1726,14 @@ body.no-scroll {
   }
 
   .work-cta {
-    color: var(--mu);
+     color: var(--muted);
   }
-
+.work-cta a {
+    color: var(--brand);
+  }
+  .work-cta a:hover {
+    color: #60a5fa;
+  }
   .btn-ghost {
     color: var(--surface);
   }
@@ -2084,5 +2089,18 @@ body.no-scroll {
       background-size: 200% 100%;
       animation: gradientShiftDark 2.5s ease-in-out infinite;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Make text dark on white secondary buttons */
+  .btn:not(.btn-primary) {
+    color: #0f172a;               /* dark ink */
+    border-color: var(--border);  /* optional: keeps the subtle border */
+  }
+
+  /* keep hover feeling consistent (optional) */
+  .btn:not(.btn-primary):hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .24);
   }
 }

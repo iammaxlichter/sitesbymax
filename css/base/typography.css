@@ -1,0 +1,66 @@
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 1.2rem + 4vw, 3rem);
+  background: linear-gradient(135deg, var(--text), var(--brand));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem);
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(45deg, var(--brand), #60a5fa);
+  border-radius: 2px;
+  animation: expandLine 1s ease 0.5s both;
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+}
+
+strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Dark mode typography adjustments */
+@media (prefers-color-scheme: dark) {
+  
+  h2 {
+    color: var(--text);
+  }
+  
+  strong {
+    color: var(--text);
+  }
+}

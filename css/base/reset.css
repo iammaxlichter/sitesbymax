@@ -1,0 +1,70 @@
+/* =========================================
+   RESET & BASE STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text);
+  line-height: var(--line-height);
+  background-color: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+a {
+  color: inherit;
+  transition: var(--transition);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(255, 182, 72, .35);
+  border-radius: 8px;
+  outline-offset: 2px;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(77, 171, 247, 0.3);
+  color: var(--text);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}

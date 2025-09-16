@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <!-- ===========================
+       META & BASIC INFO
+  =========================== -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurant Website Redesigns — Max Lichter</title>
   <meta name="description" content="Modern, mobile-friendly restaurant website redesigns with hosting and maintenance.">
-
-  <!-- Fonts -->
+  
+  <!-- ===========================
+       FONTS & ICONS
+  =========================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/png">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- ===========================
+       STYLESHEETS
+  =========================== -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -23,16 +29,17 @@
   =========================== -->
   <header class="site-header">
     <div class="container nav">
+      <!-- Brand/Logo -->
       <a class="brand" href="#home">Max Lichter</a>
 
-      <!-- Mobile Menu Toggle -->
+      <!-- Mobile Menu Toggle Button -->
       <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Navigation Links -->
+      <!-- Main Navigation -->
       <nav id="primary-nav" class="nav-links" role="navigation">
         <a href="#work">Before / After</a>
         <a href="#packages">Packages</a>
@@ -46,19 +53,24 @@
        MAIN CONTENT
   =========================== -->
   <main id="home">
-
-    <!-- Hero Section -->
+    
+    <!-- ===========================
+         HERO SECTION
+    =========================== -->
     <section class="hero">
       <div class="container hero-inner">
+        <!-- Hero Copy/Text Content -->
         <div class="hero-copy">
           <h1>Modern restaurant websites that bring customers in.</h1>
           <p>Static mockups first. Fast turnaround. Hosting and maintenance included so you never touch a thing.</p>
 
+          <!-- Call-to-Action Buttons -->
           <div class="cta">
             <a class="btn btn-primary" href="#contact">Request a free mockup</a>
             <a class="btn btn-ghost" href="#work">See before/after</a>
           </div>
 
+          <!-- Feature Badges -->
           <ul class="badges">
             <li>Mobile-first</li>
             <li>1-2 week delivery</li>
@@ -67,6 +79,7 @@
           </ul>
         </div>
 
+        <!-- Hero Stats Card -->
         <div class="hero-card">
           <div class="stat">
             <strong>More Customers</strong>
@@ -84,7 +97,9 @@
       </div>
     </section>
 
-    <!-- Value Proposition Cards -->
+    <!-- ===========================
+         VALUE PROPOSITION CARDS
+    =========================== -->
     <section class="value">
       <div class="container grid-3">
         <article class="card">
@@ -104,30 +119,43 @@
       </div>
     </section>
 
-    <!-- Before & After Portfolio -->
+    <!-- ===========================
+         BEFORE & AFTER PORTFOLIO
+    =========================== -->
     <section id="work" class="work">
       <div class="container">
+        <!-- Section Header -->
         <header class="section-head">
           <h2>Before / After</h2>
           <p>Quick mockups to show what your site could look like—approve it, then I build.</p>
         </header>
 
+        <!-- Portfolio Grid -->
         <div class="work-grid">
-          <!-- Project Example 1 -->
+          
+          <!-- ===========================
+               PROJECT EXAMPLE 1
+          =========================== -->
           <article class="ba card">
-            <!-- Before Images & Analysis -->
+            <!-- BEFORE Column -->
             <figure class="ba-col">
               <div class="tag tag-bad">Before</div>
 
+              <!-- Before Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" src="images/mockups/sample-before-1-desktop.jpeg"
-                  alt="Old website desktop view" onclick="openLightbox(this)">
-                <img class="shot shot--mobile" src="images/mockups/sample-before-1-mobile.jpeg" alt="Old website mobile view"
-                  onclick="openLightbox(this)">
+                <img class="shot shot--desktop" 
+                     src="images/mockups/sample-before-1-desktop.jpeg"
+                     alt="Old website desktop view" 
+                     onclick="openLightbox(this)">
+                <img class="shot shot--mobile" 
+                     src="images/mockups/sample-before-1-mobile.jpeg" 
+                     alt="Old website mobile view"
+                     onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
 
+              <!-- Issues with Before Design -->
               <ul class="ba-points bad-points">
                 <li>Bland, text-heavy menu list with no images</li>
                 <li>Poor visual hierarchy; prices and items blend together</li>
@@ -135,19 +163,25 @@
               </ul>
             </figure>
 
-            <!-- After Images & Analysis -->
+            <!-- AFTER Column -->
             <figure class="ba-col">
               <div class="tag tag-good">After</div>
 
+              <!-- After Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" src="images/mockups/sample-after-1-desktop.jpeg" alt="New website desktop view"
-                  onclick="openLightbox(this)">
-                <img class="shot shot--mobile" src="images/mockups/sample-after-1-mobile.jpeg" alt="New website mobile view"
-                  onclick="openLightbox(this)">
+                <img class="shot shot--desktop" 
+                     src="images/mockups/sample-after-1-desktop.jpeg" 
+                     alt="New website desktop view"
+                     onclick="openLightbox(this)">
+                <img class="shot shot--mobile" 
+                     src="images/mockups/sample-after-1-mobile.jpeg" 
+                     alt="New website mobile view"
+                     onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
 
+              <!-- Improvements in After Design -->
               <ul class="ba-points good-points">
                 <li>Modern, colorful design with clear, easy-to-read menus</li>
                 <li>Mobile-friendly with quick call, directions, and hours at the top</li>
@@ -156,21 +190,29 @@
             </figure>
           </article>
 
-          <!-- Project Example 2 -->
+          <!-- ===========================
+               PROJECT EXAMPLE 2
+          =========================== -->
           <article class="ba card">
-            <!-- Before Images & Analysis -->
+            <!-- BEFORE Column -->
             <figure class="ba-col">
               <div class="tag tag-bad">Before</div>
 
+              <!-- Before Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" src="images/mockups/sample-before-2-desktop.jpeg"
-                  alt="Old website desktop view" onclick="openLightbox(this)">
-                <img class="shot shot--mobile" src="images/mockups/sample-before-2-mobile.jpeg" alt="Old website mobile view"
-                  onclick="openLightbox(this)">
+                <img class="shot shot--desktop" 
+                     src="images/mockups/sample-before-2-desktop.jpeg"
+                     alt="Old website desktop view" 
+                     onclick="openLightbox(this)">
+                <img class="shot shot--mobile" 
+                     src="images/mockups/sample-before-2-mobile.jpeg" 
+                     alt="Old website mobile view"
+                     onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
 
+              <!-- Issues with Before Design -->
               <ul class="ba-points bad-points">
                 <li>Generic, minimal styling with no strong brand identity</li>
                 <li>Overly plain layout — feels like a basic template</li>
@@ -178,19 +220,25 @@
               </ul>
             </figure>
 
-            <!-- After Images & Analysis -->
+            <!-- AFTER Column -->
             <figure class="ba-col">
               <div class="tag tag-good">After</div>
 
+              <!-- After Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" src="images/mockups/sample-after-2-desktop.jpeg" alt="New website desktop view"
-                  onclick="openLightbox(this)">
-                <img class="shot shot--mobile" src="images/mockups/sample-after-2-mobile.jpeg" alt="New website mobile view"
-                  onclick="openLightbox(this)">
+                <img class="shot shot--desktop" 
+                     src="images/mockups/sample-after-2-desktop.jpeg" 
+                     alt="New website desktop view"
+                     onclick="openLightbox(this)">
+                <img class="shot shot--mobile" 
+                     src="images/mockups/sample-after-2-mobile.jpeg" 
+                     alt="New website mobile view"
+                     onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
 
+              <!-- Improvements in After Design -->
               <ul class="ba-points good-points">
                 <li>Bold, colorful design with warm gradients for a vibrant look</li>
                 <li>Large, appetizing food photography to grab attention</li>
@@ -200,22 +248,28 @@
           </article>
         </div>
 
+        <!-- Call-to-Action -->
         <p class="work-cta">
           Want to see your restaurant here? <a href="#contact">Request a free mockup →</a>
         </p>
       </div>
     </section>
 
-    <!-- Pricing Packages -->
+    <!-- ===========================
+         PRICING PACKAGES
+    =========================== -->
     <section id="packages" class="packages">
       <div class="container">
+        <!-- Section Header -->
         <header class="section-head">
           <h2>Simple packages</h2>
           <p>Intro pricing while I build my portfolio. Fixed, transparent, no surprises.</p>
         </header>
 
+        <!-- Pricing Grid -->
         <div class="grid-3">
-          <!-- Launch Package -->
+          
+          <!-- Launch Package (Intro) -->
           <article class="card plan">
             <h3>Launch (Intro)</h3>
             <p class="price">$60</p>
@@ -257,13 +311,17 @@
       </div>
     </section>
 
-    <!-- Process Steps -->
+    <!-- ===========================
+         PROCESS STEPS
+    =========================== -->
     <section id="process" class="process">
       <div class="container">
+        <!-- Section Header -->
         <header class="section-head">
           <h2>How it works</h2>
         </header>
 
+        <!-- Process Steps -->
         <ol class="steps">
           <li><strong>Free mockup:</strong> I redesign your homepage as an image preview.</li>
           <li><strong>Approve & deposit:</strong> 50% to schedule build.</li>
@@ -273,51 +331,63 @@
       </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- ===========================
+         CONTACT FORM SECTION
+    =========================== -->
     <section id="contact" class="contact">
       <div class="container">
+        <!-- Section Header -->
         <header class="section-head">
           <h2>Request your free mockup</h2>
           <p>No obligation. I'll send a before/after preview and a clear quote.</p>
         </header>
 
+        <!-- Contact Grid -->
         <div class="contact-grid">
+          
           <!-- Contact Form -->
           <form class="card form" action="https://formspree.io/f/meozdbqb" method="POST">
+            <!-- Restaurant Name -->
             <label>
               Restaurant name
               <input type="text" name="Restaurant" placeholder="e.g., Pecan Grove Diner" required>
             </label>
 
+            <!-- Website URL (Optional) -->
             <label>
               Website (if you have one)
               <input type="url" name="Website" placeholder="https://example.com">
             </label>
 
+            <!-- Contact Name -->
             <label>
               Your name
               <input type="text" name="Name" placeholder="Your full name" required>
             </label>
 
+            <!-- Email Address -->
             <label>
               Email
               <input type="email" name="Email" placeholder="you@example.com" required>
             </label>
 
+            <!-- Project Details -->
             <label>
               What do you need? Be VERY specific!
               <textarea name="Notes" rows="5" placeholder="Menu update, new photos, reservations, events…"></textarea>
             </label>
 
-            <!-- Spam honeypot -->
+            <!-- Anti-Spam Honeypot -->
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
+            <!-- Submit Button -->
             <button class="btn btn-primary" type="submit">Send request</button>
+            
+            <!-- Alternative Contact Method -->
             <p class="tiny">Prefer email? <a href="mailto:iammaxlichter@gmail.com">iammaxlichter@gmail.com</a></p>
           </form>
 
-
-          <!-- Contact Information -->
+          <!-- Contact Information Card -->
           <aside class="card contact-card">
             <h3>Contact</h3>
             <p><a href="mailto:iammaxlichter@gmail.com">iammaxlichter@gmail.com</a></p>
@@ -349,8 +419,10 @@
   =========================== -->
   <footer class="site-footer">
     <div class="container footer-inner">
+      <!-- Copyright -->
       <p class="copyright">© <span id="y">2025</span> Max Lichter. All rights reserved.</p>
 
+      <!-- Footer Navigation -->
       <nav class="footer-links" aria-label="Footer">
         <a href="#packages">Packages</a>
         <a href="#work">Before / After</a>
@@ -363,89 +435,158 @@
        JAVASCRIPT
   =========================== -->
   <script>
-    // Update copyright year automatically
-    document.getElementById('y').textContent = new Date().getFullYear();
+    /* ===========================
+       UTILITY FUNCTIONS
+    =========================== */
+    
+    /**
+     * Updates the copyright year automatically
+     */
+    function updateCopyrightYear() {
+      const yearElement = document.getElementById('y');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    }
 
-    // Mobile navigation toggle functionality
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('#primary-nav');
+    /* ===========================
+       MOBILE NAVIGATION
+    =========================== */
+    
+    /**
+     * Initializes mobile navigation toggle functionality
+     */
+    function initMobileNavigation() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('#primary-nav');
+      
+      if (!toggle || !nav) return;
 
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.classList.toggle('no-scroll', open);
-    });
-
-    // Close navigation when clicking on nav links (mobile)
-    document.querySelectorAll('#primary-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
+      // Toggle navigation menu
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.classList.toggle('no-scroll', isOpen);
       });
-    });
 
-    // Lightbox functionality
+      // Close navigation when clicking on nav links (mobile)
+      document.querySelectorAll('#primary-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('no-scroll');
+        });
+      });
+    }
+
+    /* ===========================
+       LIGHTBOX FUNCTIONALITY
+    =========================== */
+    
+    /**
+     * Opens the lightbox modal with the clicked image
+     * @param {HTMLImageElement} img - The image element that was clicked
+     */
     function openLightbox(img) {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
+      
+      if (!lightbox || !lightboxImg) return;
+      
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.style.display = 'flex';
     }
 
+    /**
+     * Closes the lightbox modal
+     */
     function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox) {
+        lightbox.style.display = 'none';
+      }
     }
 
-    (function () {
+    /* ===========================
+       CONTACT FORM HANDLING
+    =========================== */
+    
+    /**
+     * Initializes the contact form with AJAX submission
+     */
+    function initContactForm() {
       const form = document.querySelector('.card.form');
-      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!form) return;
 
-      // Create a status message element
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!submitBtn) return;
+
+      // Create status message element
       const status = document.createElement('p');
       status.className = 'tiny';
       status.setAttribute('role', 'status');
       status.style.marginTop = '0.5rem';
       form.appendChild(status);
 
+      // Handle form submission
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Disable submit button & update text
+        // Update UI - disable button and show loading state
         submitBtn.disabled = true;
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending…';
         status.textContent = '';
 
-        const data = new FormData(form);
+        const formData = new FormData(form);
 
         try {
-          const res = await fetch(form.action, {
+          // Submit form data
+          const response = await fetch(form.action, {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
-            body: data
+            body: formData
           });
 
-          if (res.ok) {
+          if (response.ok) {
+            // Success: Reset form and show success message
             form.reset();
-            status.textContent = 'Thanks! I’ll get back to you shortly.';
+            status.textContent = 'Thanks! I\'ll get back to you shortly.';
             status.style.color = 'green';
           } else {
-            const err = await res.json().catch(() => ({}));
-            status.textContent = err?.errors?.[0]?.message || '❌ Something went wrong. Please try again.';
+            // Error: Show error message
+            const errorData = await response.json().catch(() => ({}));
+            status.textContent = errorData?.errors?.[0]?.message || '❌ Something went wrong. Please try again.';
             status.style.color = 'red';
           }
         } catch (error) {
+          // Network error
           status.textContent = '❌ Network error. Please try again.';
           status.style.color = 'red';
         } finally {
+          // Restore button to original state
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
         }
       });
-    })();
+    }
+
+    /* ===========================
+       INITIALIZATION
+    =========================== */
+    
+    /**
+     * Initialize all functionality when DOM is loaded
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCopyrightYear();
+      initMobileNavigation();
+      initContactForm();
+    });
+
+    // Run copyright update immediately (in case DOM is already loaded)
+    updateCopyrightYear();
   </script>
 </body>
-
 </html>

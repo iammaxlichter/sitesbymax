@@ -1,0 +1,91 @@
+/* =========================================
+   PACKAGES / PRICING SECTION
+========================================= */
+
+.packages {
+  padding: 28px 0;
+}
+
+.plan {
+  position: relative;
+  overflow: hidden;
+}
+
+.plan:nth-child(2) {
+  transform: scale(1.05);
+  border-color: var(--brand);
+}
+
+.plan:nth-child(2)::after {
+  content: 'Most Popular';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  animation: pulse 2s infinite;
+}
+
+.plan .price {
+  font-size: var(--font-size-xl);
+  margin: 0.35rem 0 0.6rem;
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.features {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  color: var(--muted);
+}
+
+.features li {
+  margin: 0.4rem 0;
+  padding-left: 1.1rem;
+  position: relative;
+  animation: fadeInLeft 0.6s ease both;
+}
+
+.features li:nth-child(1) { animation-delay: 0.1s; }
+.features li:nth-child(2) { animation-delay: 0.2s; }
+.features li:nth-child(3) { animation-delay: 0.3s; }
+.features li:nth-child(4) { animation-delay: 0.4s; }
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 900;
+  animation: scaleIn 0.5s ease both;
+  animation-delay: inherit;
+}
+
+.note {
+  color: var(--muted);
+  display: block;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .plan {
+    background: var(--surface);
+  }
+  
+  .plan .price {
+    background: linear-gradient(135deg, var(--brand), #60a5fa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

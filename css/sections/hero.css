@@ -1,0 +1,131 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+  padding: clamp(20px, 4vw, 40px) 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.hero-copy {
+  animation: fadeInLeft 1s ease 0.2s both;
+}
+
+.hero-copy h1 {
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  margin: 0 0 12px;
+  animation: fadeInLeft 1s ease 0.4s both;
+}
+
+.cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+  animation: fadeInLeft 1s ease 0.6s both;
+}
+
+/* Hero badges */
+.badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badges li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  background: var(--chip);
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.badges li:hover {
+  transform: translateY(-2px);
+  background: rgba(77, 171, 247, .1);
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+/* Hero card */
+.hero-card {
+  animation: fadeInRight 1s ease 0.4s both;
+}
+
+/* Stats within hero card */
+.stat {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.stat:hover {
+  transform: translateY(-3px) rotate(1deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+}
+
+.stat strong {
+  display: block;
+  font-size: var(--font-size-lg);
+  transition: color 0.3s ease;
+}
+
+.stat:hover strong {
+  color: var(--brand);
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive hero layout */
+@media (min-width: 640px) {
+  .hero-inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+/* Mobile CTA adjustments */
+@media (max-width: 560px) {
+  .hero-copy h1 {
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+  
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Dark mode hero adjustments */
+@media (prefers-color-scheme: dark) {
+  .badges li:hover {
+    background: rgba(77, 171, 247, .15);
+    color: var(--brand);
+  }
+  
+}

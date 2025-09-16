@@ -1,0 +1,345 @@
+/* =========================================
+   ANIMATION KEYFRAMES
+========================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes expandLine {
+  to {
+    width: 60px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(77, 171, 247, 0.6);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--brand);
+  }
+}
+
+@keyframes loading {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Dark mode specific animations */
+@keyframes gradientShiftDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* =========================================
+   ANIMATION CLASSES
+========================================= */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-left.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-scale.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Magnetic button effect */
+.magnetic {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Glowing effect */
+.glow {
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.3);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+/* Text typing effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--brand);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Loading animation */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: loading 2s infinite;
+}
+
+/* Interactive hover effects */
+.interactive-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   DARK MODE SPECIFIC ANIMATIONS
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+  /* Enhanced gradient animation for dark mode */
+  .brand,
+  .hero-copy h1 {
+    animation: gradientShiftDark 3s ease-in-out infinite;
+  }
+  
+  /* Subtle glow effect for interactive elements */
+  .btn:hover,
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(77, 171, 247, 0.15);
+  }
+  
+  /* Enhanced button primary glow */
+  .btn-primary:hover {
+    box-shadow: 0 12px 40px rgba(77, 171, 247, 0.4);
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    .brand,
+    .hero-copy h1 {
+      background-size: 200% 100%;
+      animation: gradientShiftDark 2.5s ease-in-out infinite;
+    }
+  }
+}
+
+/* =========================================
+   REDUCED MOTION PREFERENCES
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-card {
+    animation: none;
+  }
+  
+  .typewriter {
+    animation: none;
+    border-right: none;
+  }
+  
+  .loading::before {
+    animation: none;
+  }
+}

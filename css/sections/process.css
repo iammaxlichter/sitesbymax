@@ -1,0 +1,74 @@
+/* =========================================
+   PROCESS / STEPS SECTION
+========================================= */
+
+.process {
+  padding: 28px 0;
+}
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.steps li {
+  position: relative;
+  margin: 0.7rem 0;
+  padding: 0.7rem 0.9rem 0.7rem 2.6rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: var(--transition);
+  animation: fadeInUp 0.8s ease both;
+}
+
+.steps li:nth-child(1) { animation-delay: 0.1s; }
+.steps li:nth-child(2) { animation-delay: 0.3s; }
+.steps li:nth-child(3) { animation-delay: 0.5s; }
+.steps li:nth-child(4) { animation-delay: 0.7s; }
+
+.steps li:hover {
+  transform: translateX(10px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+  border-color: var(--brand);
+}
+
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  color: var(--brand-ink);
+  border-radius: 50%;
+  font-weight: 800;
+  transition: var(--transition);
+}
+
+.steps li:hover::before {
+  transform: translateY(-50%) scale(1.2) rotate(360deg);
+}
+
+/* Enhanced hover effects for larger screens */
+@media (min-width: 1200px) {
+  .steps li:hover {
+    transform: translateX(20px) scale(1.03);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .steps li {
+    background: var(--surface);
+    color: var(--text);
+  }
+}
