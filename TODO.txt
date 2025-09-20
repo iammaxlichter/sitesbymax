@@ -1,0 +1,34 @@
+# Restaurant Website Redesign Business - Month 1 Plan (Static Mockups First)
+
+## WEEK 1 – Portfolio + Mockups
+[ DONE ] Create simple portfolio site (One-pager with name, service offer, mockups, contact form)
+[ DONE ] Secure domain name
+[ DONE ] Design 2–3 static restaurant website mockups in Figma/Canva/Adobe XD
+    - Show "Before" and "After" side-by-side
+    - Include Home page, Menu page, and Mobile view in each
+
+## WEEK 2 – Outreach
+[ ] Create hit list of 20–30 local restaurants with outdated or no website
+    - Search "[Your City] restaurant" on Google Maps
+    - Note name, website, phone, email
+[ ] Prepare outreach materials
+    - Tablet with mockups for walk-ins
+    - Email template with before/after images
+[ ] Begin outreach
+    - Walk-ins during slow hours
+    - Personalized cold emails
+    - Instagram DMs where applicable
+
+## WEEK 3 – Land & Deliver First Client
+[ ] Pitch mockups to prospects
+[ ] Secure 50% deposit before starting build
+[ ] Build site in ASP.NET or React based on approved mockup
+[ ] Deliver site in 1–2 weeks
+[ ] Collect testimonial + before/after screenshots
+[ ] Update portfolio site with completed client project
+
+## ONGOING
+[ ] Continue outreach weekly (10–15 restaurants)
+[ ] Add each completed project to portfolio
+[ ] Adjust pricing upward as portfolio grows
+[ ] Offer maintenance subscription to existing clients
