@@ -1056,6 +1056,61 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="contact-sub">Have a question, special request, or want to share feedback? We’d love to hear from you.
+      </p>
+
+      <form class="contact-form" action="https://formspree.io/f/myzdrawj" method="POST" accept-charset="UTF-8"
+        id="contact-form">
+        <!-- honeypot (spam trap) -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px"
+          aria-hidden="true">
+
+        <!-- subject (optional but nice for your inbox) -->
+        <input type="hidden" name="_subject" value="Wok D'Lite — New Contact Form Submission">
+
+        <fieldset class="grid-2">
+          <label>
+            <span>First Name <sup>*</sup></span>
+            <input type="text" name="firstName" placeholder="Enter your first name" required />
+          </label>
+
+          <label>
+            <span>Last Name <sup>*</sup></span>
+            <input type="text" name="lastName" placeholder="Enter your last name" required />
+          </label>
+        </fieldset>
+
+        <label class="full">
+          <span>Email Address <sup>*</sup></span>
+          <!-- Formspree recognizes "email" for reply-to -->
+          <input type="email" name="email" placeholder="Enter your email address" required />
+        </label>
+
+        <label class="full">
+          <span>Your Message <sup>*</sup></span>
+          <textarea name="message" rows="6"
+            placeholder="Tell us about your question, special dietary needs, catering inquiry, or any feedback you’d like to share."
+            required></textarea>
+        </label>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit" id="contact-submit">Send Message</button>
+        </div>
+
+        <p class="tiny note">* Required fields. We respect your privacy and will never share your information.</p>
+
+        <!-- status area populated by JS -->
+        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+
+    </div>
+  </section>
+
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -1183,6 +1238,61 @@
       }
     })();
 
+    (function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+
+      const status = document.getElementById('form-status');
+      const submitBtn = document.getElementById('contact-submit');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // disable button + visual loading state
+        submitBtn.disabled = true;
+        submitBtn.classList.add('is-loading');
+
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(form.action, {
+            method: form.method || 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.reset();
+            status.className = 'form-status alert-success';
+            status.textContent = 'Thanks! Your message has been sent.';
+          } else {
+            let msg = 'Something went wrong. Please try again.';
+            try {
+              const json = await res.json();
+              if (json && json.errors && json.errors.length) {
+                msg = json.errors.map(e => e.message).join(', ');
+              }
+            } catch { }
+            status.className = 'form-status alert-error';
+            status.textContent = msg;
+          }
+        } catch (err) {
+          status.className = 'form-status alert-error';
+          status.textContent = 'Network error. Please check your connection and try again.';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('is-loading');
+
+          if (status.textContent.trim() !== '') {
+            setTimeout(() => {
+              status.className = 'form-status';
+              status.textContent = '';
+            }, 3000);
+          }
+        }
+
+      });
+    })();
   </script>
 </body>
 
