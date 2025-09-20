@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- ===========================
        META & BASIC INFO
@@ -8,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurant Website Redesigns — Max Lichter</title>
   <meta name="description" content="Modern, mobile-friendly restaurant website redesigns with hosting and maintenance.">
-  
+
   <!-- ===========================
        FONTS & ICONS
   =========================== -->
@@ -16,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/png">
-  
+
   <!-- ===========================
        STYLESHEETS
   =========================== -->
@@ -53,7 +54,7 @@
        MAIN CONTENT
   =========================== -->
   <main id="home">
-    
+
     <!-- ===========================
          HERO SECTION
     =========================== -->
@@ -132,7 +133,7 @@
 
         <!-- Portfolio Grid -->
         <div class="work-grid">
-          
+
           <!-- ===========================
                PROJECT EXAMPLE 1
           =========================== -->
@@ -143,14 +144,10 @@
 
               <!-- Before Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" 
-                     src="images/mockups/sample-before-1-desktop.jpeg"
-                     alt="Old website desktop view" 
-                     onclick="openLightbox(this)">
-                <img class="shot shot--mobile" 
-                     src="images/mockups/sample-before-1-mobile.jpeg" 
-                     alt="Old website mobile view"
-                     onclick="openLightbox(this)">
+                <img class="shot shot--desktop" src="images/mockups/sample-before-1-desktop.jpeg"
+                  alt="Old website desktop view" onclick="openLightbox(this)">
+                <img class="shot shot--mobile" src="images/mockups/sample-before-1-mobile.jpeg"
+                  alt="Old website mobile view" onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
@@ -169,14 +166,10 @@
 
               <!-- After Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" 
-                     src="images/mockups/sample-after-1-desktop.jpeg" 
-                     alt="New website desktop view"
-                     onclick="openLightbox(this)">
-                <img class="shot shot--mobile" 
-                     src="images/mockups/sample-after-1-mobile.jpeg" 
-                     alt="New website mobile view"
-                     onclick="openLightbox(this)">
+                <img class="shot shot--desktop" src="images/mockups/sample-after-1-desktop.jpeg"
+                  alt="New website desktop view" onclick="openLightbox(this)">
+                <img class="shot shot--mobile" src="images/mockups/sample-after-1-mobile.jpeg"
+                  alt="New website mobile view" onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
@@ -188,6 +181,13 @@
                 <li>Fast-loading pages so customers can order or find info instantly</li>
               </ul>
             </figure>
+
+            <p class="demo-link">
+              <a href="https://sitesbymax.com/restaurants/wokdlite/" target="_blank" rel="noopener" class="demo-btn">
+                View Full Website Demo →
+              </a>
+            </p>
+
           </article>
 
           <!-- ===========================
@@ -200,14 +200,10 @@
 
               <!-- Before Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" 
-                     src="images/mockups/sample-before-2-desktop.jpeg"
-                     alt="Old website desktop view" 
-                     onclick="openLightbox(this)">
-                <img class="shot shot--mobile" 
-                     src="images/mockups/sample-before-2-mobile.jpeg" 
-                     alt="Old website mobile view"
-                     onclick="openLightbox(this)">
+                <img class="shot shot--desktop" src="images/mockups/sample-before-2-desktop.jpeg"
+                  alt="Old website desktop view" onclick="openLightbox(this)">
+                <img class="shot shot--mobile" src="images/mockups/sample-before-2-mobile.jpeg"
+                  alt="Old website mobile view" onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
@@ -226,14 +222,10 @@
 
               <!-- After Screenshots -->
               <div class="ba-images">
-                <img class="shot shot--desktop" 
-                     src="images/mockups/sample-after-2-desktop.jpeg" 
-                     alt="New website desktop view"
-                     onclick="openLightbox(this)">
-                <img class="shot shot--mobile" 
-                     src="images/mockups/sample-after-2-mobile.jpeg" 
-                     alt="New website mobile view"
-                     onclick="openLightbox(this)">
+                <img class="shot shot--desktop" src="images/mockups/sample-after-2-desktop.jpeg"
+                  alt="New website desktop view" onclick="openLightbox(this)">
+                <img class="shot shot--mobile" src="images/mockups/sample-after-2-mobile.jpeg"
+                  alt="New website mobile view" onclick="openLightbox(this)">
               </div>
 
               <p class="click-hint">Click any image to view it larger</p>
@@ -268,7 +260,7 @@
 
         <!-- Pricing Grid -->
         <div class="grid-3">
-          
+
           <!-- Launch Package (Intro) -->
           <article class="card plan">
             <h3>Launch (Intro)</h3>
@@ -344,7 +336,7 @@
 
         <!-- Contact Grid -->
         <div class="contact-grid">
-          
+
           <!-- Contact Form -->
           <form class="card form" action="https://formspree.io/f/meozdbqb" method="POST">
             <!-- Restaurant Name -->
@@ -382,7 +374,7 @@
 
             <!-- Submit Button -->
             <button class="btn btn-primary" type="submit">Send request</button>
-            
+
             <!-- Alternative Contact Method -->
             <p class="tiny">Prefer email? <a href="mailto:iammaxlichter@gmail.com">iammaxlichter@gmail.com</a></p>
           </form>
@@ -438,7 +430,7 @@
     /* ===========================
        UTILITY FUNCTIONS
     =========================== */
-    
+
     /**
      * Updates the copyright year automatically
      */
@@ -452,14 +444,14 @@
     /* ===========================
        MOBILE NAVIGATION
     =========================== */
-    
+
     /**
      * Initializes mobile navigation toggle functionality
      */
     function initMobileNavigation() {
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('#primary-nav');
-      
+
       if (!toggle || !nav) return;
 
       // Toggle navigation menu
@@ -482,7 +474,7 @@
     /* ===========================
        LIGHTBOX FUNCTIONALITY
     =========================== */
-    
+
     /**
      * Opens the lightbox modal with the clicked image
      * @param {HTMLImageElement} img - The image element that was clicked
@@ -490,9 +482,9 @@
     function openLightbox(img) {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-      
+
       if (!lightbox || !lightboxImg) return;
-      
+
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.style.display = 'flex';
@@ -511,7 +503,7 @@
     /* ===========================
        CONTACT FORM HANDLING
     =========================== */
-    
+
     /**
      * Initializes the contact form with AJAX submission
      */
@@ -575,7 +567,7 @@
     /* ===========================
        INITIALIZATION
     =========================== */
-    
+
     /**
      * Initialize all functionality when DOM is loaded
      */
@@ -589,4 +581,5 @@
     updateCopyrightYear();
   </script>
 </body>
+
 </html>
