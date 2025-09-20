@@ -18,7 +18,12 @@
     .mobile-panel:not([hidden]) {
         display: block;
     }
+}
 
+@media (min-width: 700px) {
+  .contact-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Tablet & Mobile Layout Adjustments */
@@ -151,6 +156,44 @@
     .visit {
         background: #1e293b;
     }
+
+    /* Contact: dark mode adjustments */
+    .contact-form {
+        background: var(--surface);
+        border-color: var(--border);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        background: var(--surface);
+        color: var(--text);
+        border-color: var(--border);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: 3px solid rgba(77, 171, 247, .4);
+        border-color: var(--brand);
+        box-shadow: 0 8px 26px rgba(77, 171, 247, .18);
+    }
+
+        .form-status {
+        background: var(--surface);
+    }
+
+    .form-status.alert-success {
+        color: #86efac;
+        border-color: #16a34a;
+        background: linear-gradient(135deg, rgba(22, 163, 74, .20), rgba(22, 101, 52, .15));
+    }
+
+    .form-status.alert-error {
+        color: #fca5a5;
+        border-color: #dc2626;
+        background: linear-gradient(135deg, rgba(220, 38, 38, .20), rgba(153, 27, 27, .15));
+    }
+
 }
 
 /* Landscape Mobile Adjustments */
