@@ -1,0 +1,25 @@
+/* Main CSS - Imports all modular stylesheets */
+
+/* Base Styles */
+@import url('base/variables.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
+
+/* Layout */
+@import url('layout/container.css');
+@import url('layout/grid.css');
+@import url('layout/spacing.css');
+
+/* Components */
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/menu-highlights.css');
+@import url('components/menu.css');
+@import url('components/visit.css');
+@import url('components/footer.css');
+
+/* Utilities */
+@import url('utilities/animations.css');
+@import url('utilities/responsive.css');

@@ -1,0 +1,86 @@
+/* Visit Section Component */
+
+.visit {
+  padding: 64px 0;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.visit h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.visit p {
+  color: var(--muted);
+  margin: 0 auto 40px;
+  max-width: 640px;
+  font-size: 16px;
+}
+
+/* Hours List */
+.hours-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.hours-list div:hover {
+  background: #fee2e2;
+  transform: translateX(5px);
+}
+
+.hours-list div:last-child {
+  border-bottom: none;
+}
+
+.highlight {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 6px;
+  animation: pulse 2s infinite;
+}
+
+/* Services */
+.services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  transition: all var(--transition-fast);
+}
+
+.services li:hover {
+  transform: translateX(10px);
+  color: var(--accent);
+}
+
+.services span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Staggered Card Animations */
+.visit-card:nth-child(1) {
+  animation: slideUp 0.8s ease-out 0.1s both;
+}
+
+.visit-card:nth-child(2) {
+  animation: slideUp 0.8s ease-out 0.3s both;
+}
+
+.visit-card:nth-child(3) {
+  animation: slideUp 0.8s ease-out 0.5s both;
+}

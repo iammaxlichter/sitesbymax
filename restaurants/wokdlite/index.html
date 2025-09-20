@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wok D'Lite - Responsive Page</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-row">
+        <div class="brand">Wok D'Lite</div>
+        <div class="nav-spacer"></div>
+        <div class="meta" aria-label="contact info">
+          <div class="meta-item">(281) 992-1231</div>
+          <div class="meta-item">2002 S Friendswood Dr, Friendswood, TX</div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary"
+            onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">
+            View Menu
+          </button>
+        </div>
+        <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"
+          id="hamburger">
+          <span></span>
+        </button>
+      </div>
+      <!-- Mobile collapsible panel -->
+      <div id="mobile-menu" class="mobile-panel" hidden>
+        <div class="row">
+          <div class="mobile-meta">
+            <div>(281) 992-1231</div>
+            <div>2002 S Friendswood Dr, Friendswood, TX</div>
+          </div>
+          <div class="mobile-actions">
+            <button class="btn" style="flex:1">View Menu</button>
+            <button class="btn btn-primary" style="flex:1">Order Online</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container grid">
+      <div class="copy">
+        <h1 class="eyebrow">Authentic Chinese<br />Cuisine in <span class="city">Friendswood</span></h1>
+        <p class="lead">Experience the freshest ingredients and traditional flavors at Wok D'Lite. From classic
+          stir-fries to house specialties, every dish is prepared with care.</p>
+        <div class="pills"><span class="pill">Dine-In</span><span class="pill">Takeout & Delivery</span><span
+            class="pill">Open 6 Days</span></div>
+        <div class="cta"><button class="btn btn-primary"
+            onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">
+            View Full Menu
+          </button>
+
+        </div>
+      </div>
+      <div class="media">
+        <div class="card-wrap">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1600&auto=format&fit=crop"
+              alt="Chinese Fried Rice" />
+          </div>
+        </div>
+        <div class="hours">
+          <div><strong>Hours Today</strong></div>
+          <div id="hours-today">10:30 AM - 9:30 PM</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section class="menu-highlights">
+    <div class="container">
+      <h2 class="animate-on-scroll">Our Menu Highlights</h2>
+      <p class="animate-on-scroll">
+        From traditional favorites to house specialties, discover the authentic flavors of Chinese cuisine
+      </p>
+      <div class="cards">
+        <div class="menu-card animate-on-scroll">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=1600&auto=format&fit=crop"
+              alt="Appetizers" />
+            <span class="badge">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Appetizers</h3>
+            <p>Start your meal with our crispy and flavorful appetizers</p>
+            <ul>
+              <li>10 Piece Fried Biscuits</li>
+              <li>3 Piece Soft Spring Roll</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="menu-card animate-on-scroll">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1600&auto=format&fit=crop"
+              alt="Special Combinations" />
+            <span class="badge">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Special Combinations</h3>
+            <p>Complete meals with fried rice, egg roll and fortune cookie</p>
+            <ul>
+              <li>Shrimp Chow Mein</li>
+              <li>Broccoli Chicken</li>
+              <li>Sweet and Sour Chicken</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="menu-card animate-on-scroll">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop"
+              alt="House Specialties" />
+            <span class="badge">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>House Specialties</h3>
+            <p>Our signature dishes crafted with special care</p>
+            <ul>
+              <li>Deluxe Lo Mein</li>
+              <li>Egg Foo Young</li>
+              <li>General Tso's Chicken</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta animate-on-scroll">
+        <button class="btn btn-primary"
+          onclick="document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });">
+          View Complete Menu
+        </button>
+
+      </div>
+    </div>
+  </section>
+  <!-- ===========================
+     FULL MENU (filters + items)
+=========================== -->
+  <section class="full-menu" id="menu">
+    <div class="container">
+      <h2>Full Menu</h2>
+      <p class="muted">Filter by category to find your favorites</p>
+
+      <!-- Filters -->
+      <div class="filters" role="tablist" aria-label="Menu categories">
+        <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="pill" data-filter="appetizers" role="tab">Appetizers</button>
+        <button class="pill" data-filter="soups" role="tab">Soups</button>
+        <button class="pill" data-filter="normal-combos" role="tab">D'Lite Combinations</button>
+        <button class="pill" data-filter="special-combos" role="tab">D'Lite Special Combo's</button>
+        <button class="pill" data-filter="platters" role="tab">D'Lite Platters</button>
+        <button class="pill" data-filter="family-pack" role="tab">Family Pack</button>
+        <button class="pill" data-filter="house" role="tab">House Specialties</button>
+        <button class="pill" data-filter="vegetarian" role="tab">Vegetarian</button>
+        <button class="pill" data-filter="fried-rice" role="tab">Fried Rice</button>
+        <button class="pill" data-filter="beverages" role="tab">Beverages</button>
+        <button class="pill" data-filter="extras" role="tab">Extras</button>
+      </div>
+
+      <!-- Items -->
+      <div class="menu-list" id="menu-list">
+        <!-- ========== Appetizers ========== -->
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Fried Biscuits (10)</h3>
+            <p>Crispy bite-sized biscuits.</p>
+          </div>
+          <div class="price">$2.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1543997385-22fe0f38a6cf?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Soft Spring Roll (3)</h3>
+            <p>Fresh veggie rolls.</p>
+          </div>
+          <div class="price">$4.29</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1604908176997-4313b65f7b8a?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Egg Roll (Pork or Vegetable) (1)</h3>
+            <p>Classic crispy roll.</p>
+          </div>
+          <div class="price">$1.25</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1617093727343-37478b69a227?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Egg Roll (Pork or Vegetable) (3)</h3>
+            <p>Order of three.</p>
+          </div>
+          <div class="price">2.89</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Fried Wonton (8)</h3>
+            <p>Crispy wontons, dipping sauce.</p>
+          </div>
+          <div class="price">2.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Chinese Fried Shrimp (5)</h3>
+            <p>Golden fried shrimp.</p>
+          </div>
+          <div class="price">2.95</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Cheese Puff (6) / Dumpling (Steam or Pan-Fried) (6)</h3>
+            <p>Choose crispy puffs or juicy dumplings.</p>
+          </div>
+          <div class="price">$3.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="appetizers">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Child Plate</h3>
+            <p></p>
+          </div>
+          <div class="price">$3.19</div>
+        </article>
+
+
+        <!-- ========== Soups ========== -->
+        <article class="menu-item" data-cat="soups">
+          <!--<img src="https://images.unsplash.com/photo-1604908554027-0e8c4d9f2e26?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Vegetable Soup</h3>
+            <p>Light, comforting broth.</p>
+          </div>
+          <div class="price">$1.99</div>
+        </article>
+
+        <article class="menu-item" data-cat="soups">
+          <!--<img src="https://images.unsplash.com/photo-1512058564366-c9e3e0464b0f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Egg Drop Soup</h3>
+            <p>Silky egg ribbons.</p>
+          </div>
+          <div class="price">$1.99</div>
+        </article>
+
+        <article class="menu-item" data-cat="soups">
+          <!--<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Wonton Soup</h3>
+            <p>Pork wontons, scallions.</p>
+          </div>
+          <div class="price">$2.09</div>
+        </article>
+
+        <article class="menu-item" data-cat="soups">
+          <!--<img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Hot &amp; Sour Soup</h3>
+            <p>Spicy, tangy classic.</p>
+          </div>
+          <div class="price">$2.49</div>
+        </article>
+
+        <!-- ========== D’Lite Combinations (C1–C10) ========== -->
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C1. Chicken Chow Mein &amp; Sweet &amp; Sour Pork</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.39</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>C2. Broccoli Beef &amp; Sweet &amp; Sour Pork</h3>
+            <p>Complete combo plate.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1578926374373-77d9f5b0b1f6?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C3. Moo Goo Gai Pan &amp; Sweet &amp; Sour Pork</h3>
+            <p>Chicken + classic sweet &amp; sour.</p>
+          </div>
+          <div class="price">$6.39</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C4. Pepper Steak &amp; Sweet &amp; Sour Pork</h3>
+            <p>Beef &amp; peppers + sweet &amp; sour.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C5. Spicy Chicken &amp; Sweet &amp; Sour Pork</h3>
+            <p>Heat + sweet.</p>
+          </div>
+          <div class="price">$6.39</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1612874742249-8b7c3a6d9e64?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C6. Triple D'Lite &amp; Lemon Chicken</h3>
+            <p>House trio plus citrusy chicken.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>C7. Hunan Beef &amp; Lemon Chicken</h3>
+            <p>Bold beef + crispy chicken.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>C8. Broccoli Beef &amp; Sweet &amp; Sour Shrimp</h3>
+            <p>Surf &amp; turf combo.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>C9. Pepper Steak &amp; Sweet &amp; Sour Shrimp</h3>
+            <p>Beef + shrimp favorites.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="normal-combos">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>C10. Garlic Shrimp &amp; Sweet &amp; Sour Chicken</h3>
+            <p>Garlicky shrimp &amp; crispy chicken.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <!-- ========== D’ Special Combinations (B1–B6) ========== -->
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1514517220031-164d96c1f2ba?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>B1. Shrimp Chow Mein &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>B2. Broccoli Chicken &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1600891963935-5563f14f4884?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>B3. General or Sesame Chicken &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>B4. Kung Pao Chicken &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>B5. Sweet &amp; Sour Pork &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="special-combos">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>B6. Sweet &amp; Sour Shrimp &amp; Sweet &amp; Sour Chicken</h3>
+            <p>With fried rice, egg roll &amp; fortune cookie.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <!-- ========== D’Lite Platters (A1–A20) ========== -->
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A1. Chicken Chow Mein</h3>
+            <p>Stir-fried noodles with vegetables.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A2. Broccoli Beef</h3>
+            <p>Tender beef, broccoli, brown sauce.</p>
+          </div>
+          <div class="price">$5.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-2031c8f2f5d6?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A3. Moo Goo Gai Pan</h3>
+            <p>Chicken, mushrooms &amp; vegetables.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A4. Pepper Steak</h3>
+            <p>Beef, bell peppers, onions.</p>
+          </div>
+          <div class="price">$5.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1612874742249-8b7c3a6d9e64?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A5. Spicy Chicken</h3>
+            <p>Chili-garlic sauce.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1604908176997-4313b65f7b8a?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A6. Triple D'Lite</h3>
+            <p>House trio (beef, chicken, shrimp).</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A7. Hunan Beef</h3>
+            <p>Spicy brown sauce, veggies.</p>
+          </div>
+          <div class="price">$5.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A8. Sweet &amp; Sour Pork</h3>
+            <p>House sweet &amp; sour sauce.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A9. Lemon Chicken</h3>
+            <p>Crispy chicken, lemon glaze.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A10. Garlic Shrimp</h3>
+            <p>Garlicky sautéed shrimp.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1514517220031-164d96c1f2ba?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A11. Shrimp Chow Mein</h3>
+            <p>Noodles with shrimp &amp; veggies.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A12. Sweet &amp; Sour Shrimp</h3>
+            <p>Crispy shrimp, sweet &amp; sour.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1600891963935-5563f14f4884?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A13. Sweet &amp; Sour Chicken</h3>
+            <p>House favorite.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A14. House Lo Mein</h3>
+            <p>Mixed meats &amp; veggies.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A15. Broccoli Chicken</h3>
+            <p>Chicken &amp; broccoli, brown sauce.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1598514982777-0ef1b25f1b46?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A16. General or Sesame or Orange Chicken</h3>
+            <p>Pick your favorite signature sauce.</p>
+          </div>
+          <div class="price">$5.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-5ec6a79120d5?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A17. Chicken with Cashew Nuts</h3>
+            <p>Roasted cashews, mild sauce.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1600891963935-5563f14f4884?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>A18. Almond Chicken</h3>
+            <p>Crunchy almonds, veggies.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A19. Kung Pao Chicken or Beef</h3>
+            <p>Spicy chilies, peanuts.</p>
+          </div>
+          <div class="price">$5.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="platters">
+          <!--<img src="https://images.unsplash.com/photo-1555320885-9f0bde0b9f9a?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>A20. Mongolian Beef</h3>
+            <p>Savory scallion-ginger sauce.</p>
+          </div>
+          <div class="price">$5.49</div>
+        </article>
+
+        <!-- ========== Family Pack (F1–F20) ========== -->
+        <!-- All values served with Fried Rice & Fortune Cookie -->
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F1. Chicken Chow Mein</h3>
+            <p>Family-sized entrée (includes fried rice &amp; fortune cookie).</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F2. Broccoli Beef</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F3. Moo Goo Gai Pan</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F4. Pepper Steak</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1612874742249-8b7c3a6d9e64?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F5. Spicy Chicken</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1604908176997-4313b65f7b8a?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F6. Triple D’Lite</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1544025162-68b3f31b10ed?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F7. Hunan Beef</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F8. Sweet &amp; Sour Pork</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F9. Lemon Chicken</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F10. Garlic Shrimp</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1514517220031-164d96c1f2ba?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F11. Shrimp Chow Mein</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F12. Sweet &amp; Sour Shrimp</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1600891963935-5563f14f4884?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F13. Sweet &amp; Sour Chicken</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F14. House Lo Mein</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F15. Broccoli Chicken</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1598514982777-0ef1b25f1b46?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F16. General or Sesame or Orange Chicken</h3>
+            <p>Choose your style.</p>
+          </div>
+          <div class="price">$7.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1546069901-5ec6a79120d5?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F17. Chicken with Cashew Nuts</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1600891963935-5563f14f4884?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>F18. Almond Chicken</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F19. Kung Pao Chicken or Beef</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="family-pack">
+          <!--<img src="https://images.unsplash.com/photo-1555320885-9f0bde0b9f9a?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>F20. Mongolian Beef</h3>
+            <p>Family-sized entrée.</p>
+          </div>
+          <div class="price">$8.19</div>
+        </article>
+
+
+        <!-- ========== House Specialties ========== -->
+        <article class="menu-item" data-cat="house">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Deluxe Lo Mein</h3>
+            <p>Loaded noodles with mixed meats &amp; veggies.</p>
+          </div>
+          <div class="price">$6.79</div>
+        </article>
+
+        <article class="menu-item" data-cat="house">
+          <!--<img src="https://images.unsplash.com/photo-1542444459-db63c7d19b34?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Egg Foo Young</h3>
+            <p>Shrimp or Chicken or Pork or Vegetable patties with gravy.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="house">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-2031c8f2f5d6?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Garlic Chicken</h3>
+            <p>Spicy garlic sauce.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="house">
+          <!--<img src="https://images.unsplash.com/photo-1612874742249-8b7c3a6d9e64?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Jalapeño Chicken</h3>
+            <p>Texas heat with jalapeños.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="house">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Spicy Shrimp &amp; Chicken</h3>
+            <p>Two-protein specialty in spicy sauce.</p>
+          </div>
+          <div class="price">$5.69</div>
+        </article>
+
+        <!-- ========== Vegetarian ========== -->
+        <article class="menu-item" data-cat="vegetarian">
+          <!--<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Vegetarian Delight</h3>
+            <p>Assorted fresh vegetables with bean cake (tofu) in light sauce.</p>
+          </div>
+          <div class="price"><span class="muted">Single</span> $5.19 &nbsp; <span class="muted">Quart</span> $7.49</div>
+        </article>
+
+        <!-- ========== Fried Rice ========== -->
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>R1. Vegetable Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$4.09 / $5.49</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>R2. Pork Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$4.50 / $6.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1514517220031-164d96c1f2ba?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>R3. Shrimp Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$5.05 / $6.59</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>R4. Steamed Rice</h3>
+            <p>White rice.</p>
+          </div>
+          <div class="price">$2.20 / $3.20</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>R5. Chicken Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$4.50 / $6.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-2031c8f2f5d6?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>R6. House Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$5.05 / $6.50</div>
+        </article>
+
+        <article class="menu-item" data-cat="fried-rice">
+          <!--<img src="https://images.unsplash.com/photo-1514517220031-164d96c1f2ba?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>R7. Deluxe Fried Rice</h3>
+            <p>Order / Quart.</p>
+          </div>
+          <div class="price">$5.69 / $8.39</div>
+        </article>
+
+        <!-- ========== Beverages ========== -->
+        <article class="menu-item" data-cat="beverages">
+          <!--<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Soft Drink or Iced Tea</h3>
+            <p>Assorted flavors.</p>
+          </div>
+          <div class="price">$1.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="beverages">
+          <!--<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Regular or Hot Tea</h3>
+            <p>Traditional tea.</p>
+          </div>
+          <div class="price">$1.69</div>
+        </article>
+
+        <!-- ========== Extras ========== -->
+        <article class="menu-item" data-cat="extras">
+          <!--<img src="https://images.unsplash.com/photo-1544378730-8b5104b19a3b?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Extra Meal</h3>
+            <p>Add an extra entrée portion to your combo.</p>
+          </div>
+          <div class="price">$2.19</div>
+        </article>
+
+        <article class="menu-item" data-cat="extras">
+          <!--<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=300&auto=format&fit=crop"
+            alt="">-->
+          <div class="content">
+            <h3>Extra Shrimp</h3>
+            <p>Boost any shrimp dish.</p>
+          </div>
+          <div class="price">$2.69</div>
+        </article>
+
+        <article class="menu-item" data-cat="extras">
+          <!--<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=300&auto=format&fit=crop" alt="">-->
+          <div class="content">
+            <h3>Fortune Cookies (6)</h3>
+            <p>Crunchy, sweet finish.</p>
+          </div>
+          <div class="price">$1.69</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit">
+    <div class="container">
+      <h2 class="animate-on-scroll">Visit Us Today</h2>
+      <p class="animate-on-scroll">Conveniently located in Friendswood with flexible dining options</p>
+      <div class="visit-grid">
+        <div class="visit-card animate-on-scroll">
+          <h3>Location & Contact</h3>
+          <p><strong>Address</strong><br />202 S Friendswood Dr<br />Friendswood, TX 77546-3902</p>
+          <p><strong>Phone</strong><br /><span style="color:var(--accent)">(281) 992-1231</span></p>
+        </div>
+        <div class="visit-card animate-on-scroll">
+          <h3>Hours</h3>
+          <div class="hours-list">
+            <div><span>Monday <span class="highlight">Today</span></span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Tuesday</span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Wednesday</span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Thursday</span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Friday</span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Saturday</span><span>10:30 AM - 9:00 PM</span></div>
+            <div><span>Sunday</span><span style="color:var(--accent)">Closed</span></div>
+          </div>
+        </div>
+        <div class="visit-card services animate-on-scroll">
+          <h3>Services</h3>
+          <ul>
+            <li><strong>Dine-In</strong><span>Comfortable seating available</span></li>
+            <li><strong>Takeout</strong><span>Quick pickup orders</span></li>
+            <li><strong>Delivery</strong><span>To your doorstep</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Wok D'Lite</h3>
+          <p>Serving authentic Chinese cuisine in Friendswood since day one. Fresh ingredients, traditional recipes,
+            modern convenience.</p>
+        </div>
+        <div>
+          <h3>Contact Info</h3>
+          <ul>
+            <li>202 S Friendswood Dr, Friendswood, TX 77546</li>
+            <li>(281) 992-1231</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <div class="hours-list">
+            <div><span>Mon-Fri:</span><span>10:30 AM - 9:30 PM</span></div>
+            <div><span>Saturday:</span><span>10:30 AM - 9:00 PM</span></div>
+            <div><span>Sunday:</span><span style="color:var(--accent)">Closed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobile-menu');
+    if (hamburger && panel) {
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(!expanded));
+        if (panel.hasAttribute('hidden')) { panel.removeAttribute('hidden'); panel.style.display = 'block'; }
+        else { panel.setAttribute('hidden', ''); panel.style.display = 'none'; }
+      });
+    }
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    const pills = document.querySelectorAll('.filters .pill');
+    const items = document.querySelectorAll('.menu-item');
+
+    pills.forEach(btn => {
+      btn.addEventListener('click', () => {
+        pills.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        items.forEach(it => {
+          it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+        });
+      });
+    });
+
+    // ------- Dynamic Hours (hero box + Visit section highlight)
+    (function () {
+      // Open hours mapping (local time)
+      // 0=Sun, 1=Mon, ... 6=Sat
+      const HOURS = {
+        0: null,                         // Sunday: Closed
+        1: "10:30 AM - 9:30 PM",
+        2: "10:30 AM - 9:30 PM",
+        3: "10:30 AM - 9:30 PM",
+        4: "10:30 AM - 9:30 PM",
+        5: "10:30 AM - 9:30 PM",
+        6: "10:30 AM - 9:00 PM"
+      };
+
+      const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const todayIdx = new Date().getDay();
+      const todayHours = HOURS[todayIdx];
+
+      // 1) Update the small hero box
+      const heroHoursEl = document.getElementById("hours-today");
+      if (heroHoursEl) {
+        heroHoursEl.textContent = todayHours ? todayHours : "Closed";
+        if (!todayHours) heroHoursEl.style.color = "var(--accent)";
+      }
+
+      // 2) Move the “Today” badge in the Visit section hours list
+      const list = document.querySelector(".visit .hours-list");
+      if (list) {
+        // remove any existing "Today" highlights
+        list.querySelectorAll(".highlight").forEach(h => h.remove());
+
+        // find the row that matches today's day name and append the badge
+        const rows = Array.from(list.children); // each row is a <div>
+        rows.forEach(row => {
+          const leftSpan = row.querySelector("span");      // first span: day label
+          const timeSpan = row.querySelectorAll("span")[1]; // second span: time text
+          if (!leftSpan || !timeSpan) return;
+
+          const label = leftSpan.textContent.trim().replace("Today", "").trim();
+          if (label.startsWith(dayNames[todayIdx])) {
+            const tag = document.createElement("span");
+            tag.className = "highlight";
+            tag.textContent = " Today";
+            leftSpan.appendChild(tag);
+
+            // ensure time text reflects our HOURS map (keeps everything in sync)
+            timeSpan.textContent = todayHours ? todayHours : "Closed";
+            if (!todayHours) timeSpan.style.color = "var(--accent)";
+          }
+        });
+      }
+    })();
+
+  </script>
+</body>
+
+</html>

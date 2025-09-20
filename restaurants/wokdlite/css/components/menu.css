@@ -1,0 +1,25 @@
+/* ===== Full Menu ===== */
+.full-menu { padding: 64px 0; }
+.full-menu h2 { font-size: 32px; margin-bottom: 8px; }
+.full-menu .muted { color: var(--muted); }
+
+.filters { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 24px; }
+.pill { padding:8px 14px; border-radius:999px; background:#f3f4f6; border:1px solid var(--border); font-weight:600; }
+.pill.active { background:#ffecec; border-color:#ffd4d4; color:#b91c1c; }
+
+.menu-list { display:flex; flex-direction:column; gap:14px; }
+.menu-item {
+  display:flex; align-items:center; gap:14px;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:14px; padding:14px 16px; box-shadow: var(--shadow);
+}
+.menu-item img { width:56px; height:56px; object-fit:cover; border-radius:50%; border:1px solid #eee; }
+.menu-item .content { flex:1; }
+.menu-item h3 { font-size:16px; margin:0 0 4px; }
+.menu-item p { margin:0; color:var(--muted); font-size:14px; }
+.menu-item .price { font-weight:800; color:#e11d48; white-space:nowrap; }
+
+@media (max-width:640px) {
+  .menu-item { padding:12px; }
+  .menu-item img { width:48px; height:48px; }
+}
