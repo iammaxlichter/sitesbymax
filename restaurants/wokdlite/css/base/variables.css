@@ -1,0 +1,38 @@
+/* CSS Custom Properties / Variables */
+
+:root {
+  /* Colors */
+  --bg: #fbf4f1;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #e11d48;
+  --accent: #ef4444;
+  --border: #e5e7eb;
+  --ok: #16a34a;
+  
+  /* Shadows */
+  --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+  --shadow-hover: 0 20px 40px rgba(2, 6, 23, .15);
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Border Radius */
+  --radius: 18px;
+  --radius-small: 10px;
+  --radius-large: 28px;
+  --radius-pill: 999px;
+  
+  /* Layout */
+  --container: 1120px;
+  
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-bounce: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Z-index */
+  --z-header: 50;
+  --z-overlay: 40;
+  --z-dropdown: 30;
+  --z-tooltip: 20;
+}

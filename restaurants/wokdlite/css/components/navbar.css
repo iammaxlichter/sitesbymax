@@ -1,0 +1,158 @@
+/* Navigation Component */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    animation: slideDown 0.8s ease-out;
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0;
+}
+
+/* Brand */
+.brand {
+    font-weight: 800;
+    font-size: 22px;
+    color: #b91c1c;
+    animation: slideRight 0.8s ease-out 0.2s both;
+    transition: all var(--transition-fast);
+}
+
+.brand:hover {
+    transform: scale(1.05);
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.nav-spacer {
+    flex: 1;
+}
+
+/* Meta Information */
+.meta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+    animation: slideLeft 0.8s ease-out 0.4s both;
+}
+
+.meta-item {
+    color: var(--muted);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.meta-item:hover {
+    color: var(--brand);
+    transform: translateY(-2px);
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 10px;
+    animation: slideLeft 0.8s ease-out 0.6s both;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    background: var(--surface);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+
+.hamburger:hover {
+    background: #f1f5f9;
+}
+
+.hamburger.active {
+    background: var(--accent);
+}
+
+.hamburger.active span {
+    background: transparent;
+}
+
+.hamburger.active span::before {
+    transform: rotate(45deg) translate(0, 0);
+    top: 0;
+    background: white;
+}
+
+.hamburger.active span::after {
+    transform: rotate(-45deg) translate(0, 0);
+    top: 0;
+    background: white;
+}
+
+.hamburger span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #111;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.hamburger span::before,
+.hamburger span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #111;
+    transition: all var(--transition-fast);
+}
+
+.hamburger span::before {
+    top: -6px;
+}
+
+.hamburger span::after {
+    top: 6px;
+}
+
+/* Mobile Panel */
+.mobile-panel {
+    display: none;
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+    animation: slideDown 0.5s ease-out;
+}
+
+.mobile-panel .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.mobile-actions {
+    display: flex;
+    gap: 10px;
+}

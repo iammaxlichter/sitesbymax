@@ -1,0 +1,13 @@
+/* Container Layout */
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding: 16px 20px;
+}
+
+@media (max-width: 860px) {
+  .container {
+    padding-inline: 16px;
+  }
+}

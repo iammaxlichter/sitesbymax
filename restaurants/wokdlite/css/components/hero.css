@@ -1,0 +1,114 @@
+/* Hero Section Component */
+
+.hero {
+  padding: 48px 0 72px;
+}
+
+.eyebrow {
+  font-size: clamp(26px, 4.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  animation: slideRight 1s ease-out 0.2s both;
+}
+
+.eyebrow .city {
+  color: var(--brand);
+  display: inline-block;
+  animation: pulse 2s infinite 1s;
+}
+
+.lead {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  animation: slideRight 1s ease-out 0.4s both;
+}
+
+/* Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 26px 0 14px;
+  animation: slideRight 1s ease-out 0.6s both;
+}
+
+.pill {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  animation: bounce 0.6s ease-out;
+}
+
+.pill:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.pill:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.pill:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  animation: slideRight 1s ease-out 0.8s both;
+}
+
+/* Media */
+.media {
+  position: relative;
+  animation: slideLeft 1s ease-out 0.2s both;
+}
+
+/* Hours Widget */
+.hours {
+  position: absolute;
+  left: -8px;
+  bottom: -14px;
+  background: #fff;
+  color: #111827;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+  animation: slideUp 1s ease-out 1s both;
+  transition: all var(--transition-fast);
+}
+
+.hours:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .media {
+    order: -1;
+  }
+
+  .hours {
+    position: static;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 860px) {
+  .brand {
+    font-size: 20px;
+  }
+}
