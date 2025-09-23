@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONE ONE Asian Cuisine — Malaysian Restaurant in Plano, TX</title>
+  <meta name="description" content="Authentic Malaysian Delights & Grill in Plano, Texas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="#">
+        <div class="brand-main">
+          <span class="brand-strong">ONE ONE</span> 
+          <span class="brand-light">Asian Cuisine</span>
+        </div>
+        <div class="brand-sub">旺旺马来西亚美食</div>
+      </a>
+
+      <nav class="links" id="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+          <a class="btn btn-call" href="tel:+19454269222" aria-label="Call Now">
+            <svg class="icon-phone" width="14" height="14" viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                fill="#fff" stroke="#b91c1c" stroke-width="1" />
+            </svg>
+            <span class="call-now">Call Now</span>
+          </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="overview">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <h1 class="hero-title">ONE ONE Asian Cuisine</h1>
+      <div class="hero-cn">旺旺马来西亚美食</div>
+      <p class="hero-tag">Authentic Malaysian Delights &amp; Grill in Plano, Texas</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#order">Order Online</a>
+        <a class="btn btn-secondary" href="#menu">See Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close mobile nav when clicking on a link
+    navLinks.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close mobile nav when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
