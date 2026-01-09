@@ -73,3 +73,19 @@
 .btn-group .btn {
   flex: 1;
 }
+
+/* Button loading state used by contact form submit */
+.btn.is-loading {
+  pointer-events: none;
+  opacity: 0.8;
+  position: relative;
+}
+
+.btn.is-loading::after {
+  content: '…';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: dots 1.2s steps(3, end) infinite;
+}
