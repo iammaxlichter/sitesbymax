@@ -2,27 +2,21 @@
 <html lang="en">
 
 <head>
-  <!-- ===========================
-       META & BASIC INFO
-  =========================== -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Business Website Redesigns — Max Lichter</title>
   <meta name="description" content="Modern, mobile-friendly business website redesigns with hosting and maintenance.">
- 
-  <!-- ===========================
-       FONTS & ICONS
-  =========================== -->
+
+  <!-- Fonts: Space Grotesk (display), Hanken Grotesk (body), JetBrains Mono (brackets/labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/png">
 
-  <!-- ===========================
-       STYLESHEETS
-  =========================== -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -32,7 +26,11 @@
   <header class="site-header">
     <div class="container nav">
       <!-- Brand/Logo -->
-      <a class="brand" href="#home">Max Lichter</a>
+      <a class="brand" href="#home">
+        <img src="images/icon.png" alt="">
+        <span>Max Lichter</span>
+        <span class="brand-tag">sites by max</span>
+      </a>
 
       <!-- Mobile Menu Toggle Button -->
       <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle menu">
@@ -63,8 +61,13 @@
       <div class="container hero-inner">
         <!-- Hero Copy/Text Content -->
         <div class="hero-copy">
-          <h1>Modern business websites that bring customers in.</h1>
-          <p>Static mockups first. Fast turnaround. Hosting and maintenance included so you never touch a thing.</p>
+          <p class="eyebrow">studio</p>
+          <div class="hero-headline">
+            <span class="brace brace--l" aria-hidden="true">{</span>
+            <h1>Modern business websites that <span class="mark">bring customers in.</span></h1>
+            <span class="brace brace--r" aria-hidden="true">}</span>
+          </div>
+          <p class="hero-lead">Static mockups first. Fast turnaround. Hosting and maintenance included so you never touch a thing.</p>
 
           <!-- Call-to-Action Buttons -->
           <div class="cta">
@@ -76,25 +79,26 @@
           <ul class="badges">
             <li>Mobile-first</li>
             <li>1-2 week delivery</li>
-            <li>Menu & events updates</li>
+            <li>Menu &amp; events updates</li>
             <li>Intro pricing available</li>
           </ul>
         </div>
 
-        <!-- Hero Stats Card -->
-        <div class="hero-card">
-          <div class="stat">
-            <strong>More Customers</strong>
-            <span>Attract new guests with a modern site</span>
+        <!-- Signature element: interactive before -> after comparison slider -->
+        <div class="compare" id="hero-compare">
+          <div class="compare__frame">
+            <img class="compare__after" src="images/mockups/sample-after-1-desktop.jpeg"
+              alt="The redesigned, modern version of the website" draggable="false">
+            <img class="compare__before" src="images/mockups/sample-before-1-desktop.jpeg"
+              alt="The original, dated version of the website" draggable="false">
           </div>
-          <div class="stat">
-            <strong>Higher Sales</strong>
-            <span>Promote specials & events effortlessly</span>
-          </div>
-          <div class="stat">
-            <strong>Zero Hassle</strong>
-            <span>I handle updates and changes for an unbeatable price</span>
-          </div>
+          <span class="compare__tag compare__tag--before" aria-hidden="true">Before</span>
+          <span class="compare__tag compare__tag--after" aria-hidden="true">After</span>
+          <div class="compare__divider" aria-hidden="true"></div>
+          <button type="button" class="compare__handle" id="compare-handle"
+            role="slider" aria-label="Drag to compare the old site with the redesign"
+            aria-valuemin="0" aria-valuemax="100" aria-valuenow="62"></button>
+          <span class="compare__hint" aria-hidden="true">drag to reveal</span>
         </div>
       </div>
     </section>
@@ -103,21 +107,24 @@
          VALUE PROPOSITION CARDS
     =========================== -->
     <section class="value">
-      <div class="container grid-3">
-        <article class="card">
-          <h3>Static mockup first</h3>
-          <p>Approve the look before anything is built. Fast, visual, low-risk.</p>
-        </article>
+      <div class="container">
+        <p class="eyebrow">why it works</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Static mockup first</h3>
+            <p>Approve the look before anything is built. Fast, visual, low-risk.</p>
+          </article>
 
-        <article class="card">
-          <h3>All-inclusive hosting</h3>
-          <p>Managed hosting, SSL, backups, and security updates included.</p>
-        </article>
+          <article class="card">
+            <h3>All-inclusive hosting</h3>
+            <p>Managed hosting, SSL, backups, and security updates included.</p>
+          </article>
 
-        <article class="card">
-          <h3>Menu & events updates</h3>
-          <p>Email your changes—I'll handle them. Optional monthly care plan.</p>
-        </article>
+          <article class="card">
+            <h3>Menu &amp; events updates</h3>
+            <p>Email your changes—I'll handle them. Optional monthly care plan.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -128,6 +135,7 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-head">
+          <p class="eyebrow">work</p>
           <h2>Before / After</h2>
           <p>Quick mockups to show what your site could look like—approve it, then I build.</p>
         </header>
@@ -261,6 +269,7 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-head">
+          <p class="eyebrow">packages</p>
           <h2>Simple packages</h2>
           <p>Intro pricing while I build my portfolio. Fixed, transparent, no surprises.</p>
         </header>
@@ -268,28 +277,29 @@
         <!-- Pricing Grid -->
         <div class="grid-3">
 
-          <!-- Launch Package (Intro) -->
+          <!-- Essential Package -->
           <article class="card plan">
-            <h3>Launch (Intro)</h3>
-            <p class="price">$100</p>
+            <h3>Essential</h3>
+            <p class="price">$110</p>
             <ul class="features">
-              <li>Fully fleshed out Homepage, Menu, About, Contact</li>
-              <li>Menu photo gallery, hours, and important business info!</li>
-              <li>1 year managed hosting (I host the website for a year)</li>
+              <li>Custom website designed specifically for your business</li>
+              <li>Mobile-friendly design that works on every device</li>
+              <li>1 year of hosting included</li>
+              <li>Fast turnaround (1 week or your money back)</li>
             </ul>
             <a class="btn btn-primary" href="#contact">Book your slot</a>
             <small class="note">Limited availability at intro rate.</small>
           </article>
 
-          <!-- Launch+ Package -->
-          <article class="card plan">
-            <h3>Launch+</h3>
-            <p class="price">$150</p>
+          <!-- Business Package -->
+          <article class="card plan plan--feature">
+            <h3>Business</h3>
+            <p class="price">$200</p>
             <ul class="features">
-              <li>Up to 3 free mockups before starting!</li>
-              <li>Dedicated Events & Specials page to promote what's happening at your business</li>
-              <li>Optimized for Google, so more customers find you</li>
-              <li>Reservation / Ordering online system</li>
+              <li>Google search optimization (basic SEO)</li>
+              <li>Google Maps & review integration</li>
+              <li>Priority build schedule</li>
+              <li>Online booking, reservations, or ordering setup (if applicable)</li>
             </ul>
             <a class="btn" href="#contact">Get started</a>
           </article>
@@ -299,9 +309,9 @@
             <h3>Care Plan</h3>
             <p class="price">$20-$40/mo</p>
             <ul class="features">
-              <li>Photo updates</li>
-              <li>Seasonal banners</li>
-              <li>Monthly specials posted</li>
+              <li>Website updates within 24 hours</li>
+              <li>Ongoing backups & security monitoring</li>
+              <li>New pages or layout improvements when needed</li>
               <li>Priority support</li>
             </ul>
             <a class="btn" href="#contact">Join the plan</a>
@@ -317,14 +327,15 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-head">
+          <p class="eyebrow">process</p>
           <h2>How it works</h2>
         </header>
 
         <!-- Process Steps -->
         <ol class="steps">
           <li><strong>Free mockup:</strong> I redesign your homepage as an image preview.</li>
-          <li><strong>Approve & deposit:</strong> 50% to schedule build.</li>
-          <li><strong>Build & launch:</strong> 1-2 weeks to go live.</li>
+          <li><strong>Approve &amp; deposit:</strong> 50% to schedule build.</li>
+          <li><strong>Build &amp; launch:</strong> 1-2 weeks to go live.</li>
           <li><strong>Care plan (optional):</strong> Send changes by email; I handle the rest.</li>
         </ol>
       </div>
@@ -337,6 +348,7 @@
       <div class="container">
         <!-- Section Header -->
         <header class="section-head">
+          <p class="eyebrow">contact</p>
           <h2>Request your free mockup</h2>
           <p>No obligation. I'll send a before/after preview and a clear quote.</p>
         </header>
@@ -410,7 +422,7 @@
        LIGHTBOX MODAL
   =========================== -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="">
+    <img id="lightbox-img" alt="">
   </div>
 
   <!-- ===========================
@@ -438,9 +450,7 @@
        UTILITY FUNCTIONS
     =========================== */
 
-    /**
-     * Updates the copyright year automatically
-     */
+    /** Updates the copyright year automatically */
     function updateCopyrightYear() {
       const yearElement = document.getElementById('y');
       if (yearElement) {
@@ -452,23 +462,17 @@
        MOBILE NAVIGATION
     =========================== */
 
-    /**
-     * Initializes mobile navigation toggle functionality
-     */
     function initMobileNavigation() {
       const toggle = document.querySelector('.nav-toggle');
       const nav = document.querySelector('#primary-nav');
-
       if (!toggle || !nav) return;
 
-      // Toggle navigation menu
       toggle.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('open');
         toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         document.body.classList.toggle('no-scroll', isOpen);
       });
 
-      // Close navigation when clicking on nav links (mobile)
       document.querySelectorAll('#primary-nav a').forEach(link => {
         link.addEventListener('click', () => {
           nav.classList.remove('open');
@@ -479,41 +483,104 @@
     }
 
     /* ===========================
+       BEFORE / AFTER HERO SLIDER
+    =========================== */
+
+    function initCompareSlider() {
+      const compare = document.getElementById('hero-compare');
+      const handle = document.getElementById('compare-handle');
+      if (!compare || !handle) return;
+
+      const MIN = 4, MAX = 96;
+      let pos = 62;
+      let dragging = false;
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function setPos(p, markTouched) {
+        pos = Math.max(MIN, Math.min(MAX, p));
+        compare.style.setProperty('--pos', pos + '%');
+        handle.setAttribute('aria-valuenow', Math.round(pos));
+        if (markTouched) compare.classList.add('is-touched');
+      }
+
+      function posFromEvent(clientX) {
+        const rect = compare.getBoundingClientRect();
+        return ((clientX - rect.left) / rect.width) * 100;
+      }
+
+      // Pointer drag
+      handle.addEventListener('pointerdown', (e) => {
+        dragging = true;
+        handle.setPointerCapture(e.pointerId);
+        compare.classList.add('is-touched');
+        e.preventDefault();
+      });
+      window.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        setPos(posFromEvent(e.clientX), true);
+      });
+      window.addEventListener('pointerup', () => { dragging = false; });
+
+      // Click/tap anywhere on the image jumps the divider there
+      compare.addEventListener('pointerdown', (e) => {
+        if (e.target === handle) return;
+        setPos(posFromEvent(e.clientX), true);
+      });
+
+      // Keyboard support
+      handle.addEventListener('keydown', (e) => {
+        const step = e.shiftKey ? 10 : 4;
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { setPos(pos - step, true); e.preventDefault(); }
+        else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { setPos(pos + step, true); e.preventDefault(); }
+        else if (e.key === 'Home') { setPos(MIN, true); e.preventDefault(); }
+        else if (e.key === 'End') { setPos(MAX, true); e.preventDefault(); }
+      });
+
+      // Polished on-load reveal sweep (skipped for reduced motion)
+      setPos(reduceMotion ? 55 : 88);
+      if (!reduceMotion) {
+        const target = 55, start = 88, duration = 1500;
+        let startTime = null;
+        const ease = (t) => 1 - Math.pow(1 - t, 3);
+        function frame(ts) {
+          if (startTime === null) startTime = ts;
+          const t = Math.min((ts - startTime) / duration, 1);
+          setPos(start + (target - start) * ease(t));
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        // small delay so it reads as a deliberate reveal
+        setTimeout(() => requestAnimationFrame(frame), 450);
+      }
+    }
+
+    /* ===========================
        LIGHTBOX FUNCTIONALITY
     =========================== */
 
-    /**
-     * Opens the lightbox modal with the clicked image
-     * @param {HTMLImageElement} img - The image element that was clicked
-     */
     function openLightbox(img) {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-
       if (!lightbox || !lightboxImg) return;
-
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.style.display = 'flex';
     }
 
-    /**
-     * Closes the lightbox modal
-     */
     function closeLightbox() {
       const lightbox = document.getElementById('lightbox');
-      if (lightbox) {
-        lightbox.style.display = 'none';
-      }
+      if (lightbox) lightbox.style.display = 'none';
     }
+
+    // Close lightbox on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
 
     /* ===========================
        CONTACT FORM HANDLING
     =========================== */
 
-    /**
-     * Initializes the contact form with AJAX submission
-     */
     function initContactForm() {
       const form = document.querySelector('.card.form');
       if (!form) return;
@@ -521,18 +588,14 @@
       const submitBtn = form.querySelector('button[type="submit"]');
       if (!submitBtn) return;
 
-      // Create status message element
       const status = document.createElement('p');
       status.className = 'tiny';
       status.setAttribute('role', 'status');
       status.style.marginTop = '0.5rem';
       form.appendChild(status);
 
-      // Handle form submission
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-
-        // Update UI - disable button and show loading state
         submitBtn.disabled = true;
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending…';
@@ -541,7 +604,6 @@
         const formData = new FormData(form);
 
         try {
-          // Submit form data
           const response = await fetch(form.action, {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
@@ -549,22 +611,18 @@
           });
 
           if (response.ok) {
-            // Success: Reset form and show success message
             form.reset();
             status.textContent = 'Thanks! I\'ll get back to you shortly.';
-            status.style.color = 'green';
+            status.style.color = 'var(--good)';
           } else {
-            // Error: Show error message
             const errorData = await response.json().catch(() => ({}));
             status.textContent = errorData?.errors?.[0]?.message || '❌ Something went wrong. Please try again.';
-            status.style.color = 'red';
+            status.style.color = 'var(--bad)';
           }
         } catch (error) {
-          // Network error
           status.textContent = '❌ Network error. Please try again.';
-          status.style.color = 'red';
+          status.style.color = 'var(--bad)';
         } finally {
-          // Restore button to original state
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
         }
@@ -575,16 +633,13 @@
        INITIALIZATION
     =========================== */
 
-    /**
-     * Initialize all functionality when DOM is loaded
-     */
     document.addEventListener('DOMContentLoaded', () => {
       updateCopyrightYear();
       initMobileNavigation();
+      initCompareSlider();
       initContactForm();
     });
 
-    // Run copyright update immediately (in case DOM is already loaded)
     updateCopyrightYear();
   </script>
 </body>
