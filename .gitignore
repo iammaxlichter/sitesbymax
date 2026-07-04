@@ -1,1 +1,5 @@
 TODO.txt
+node_modules
+.claude
+.gitignore
+businesses
