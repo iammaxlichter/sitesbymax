@@ -163,8 +163,13 @@ p { margin: 0 0 1rem; }
 }
 
 .start-arrow {
-  display: inline-block;
+  display: inline-flex;
   transition: transform 0.25s var(--ease);
+}
+
+.start-arrow svg {
+  width: 0.85em;
+  height: 0.85em;
 }
 
 .top-start:hover .start-arrow { transform: translate(2px, -2px); }
