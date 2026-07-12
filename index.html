@@ -4,53 +4,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sites by Max</title>
+  <title>Website Design for Service Businesses | Sites by Max</title>
   <meta name="description"
-    content="I'm Max. I build fast, good-looking websites for service businesses. Free preview first, one flat price to build, no contracts.">
+    content="Custom, mobile-first websites for service businesses — pressure washing, landscaping, home services and trades. Flat build fee, pay-what-you-want hosting. Built by Max Lichter.">
+  <link rel="canonical" href="https://sitesbymax.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Website Design for Service Businesses | Sites by Max">
+  <meta property="og:description"
+    content="Custom, mobile-first websites for service businesses — pressure washing, landscaping, home services and trades. Flat build fee, pay-what-you-want hosting. Built by Max Lichter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sitesbymax.com/">
+  <meta property="og:site_name" content="Sites by Max">
+  <meta property="og:image" content="https://sitesbymax.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sites by Max — custom websites for service businesses">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website Design for Service Businesses | Sites by Max">
+  <meta name="twitter:description"
+    content="Custom, mobile-first websites for service businesses — pressure washing, landscaping, home services and trades. Flat build fee, pay-what-you-want hosting. Built by Max Lichter.">
+  <meta name="twitter:image" content="https://sitesbymax.com/assets/og.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://sitesbymax.com/#business",
+        "name": "Sites by Max",
+        "description": "Freelance website design for service businesses — pressure washing, landscaping, home services and trades. Fast, custom, mobile-first sites with a flat build fee and pay-what-you-want hosting.",
+        "url": "https://sitesbymax.com/",
+        "image": "https://sitesbymax.com/assets/og.jpg",
+        "areaServed": {"@type": "Country", "name": "United States"},
+        "priceRange": "$",
+        "founder": {"@id": "https://sitesbymax.com/#max"},
+        "provider": {"@id": "https://sitesbymax.com/#max"},
+        "sameAs": [
+          "https://www.linkedin.com/in/iammaxlichter/",
+          "https://www.facebook.com/profile.php?id=61591719242529"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Website Design Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "price": "10.46",
+              "priceCurrency": "USD",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Build for Service Businesses",
+                "description": "A complete custom website designed and built for a service business, including mobile layout, contact form and hosting setup.",
+                "provider": {"@id": "https://sitesbymax.com/#business"}
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Website Hosting",
+                "description": "Ongoing website hosting and maintenance on a pay-what-you-want basis.",
+                "provider": {"@id": "https://sitesbymax.com/#business"}
+              },
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "Pay what you want, monthly"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://sitesbymax.com/#max",
+        "name": "Max Lichter",
+        "jobTitle": "Website Designer",
+        "worksFor": {"@id": "https://sitesbymax.com/#business"},
+        "url": "https://sitesbymax.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/iammaxlichter/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sitesbymax.com/#website",
+        "name": "Sites by Max",
+        "url": "https://sitesbymax.com/",
+        "publisher": {"@id": "https://sitesbymax.com/#business"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sitesbymax.com/#webpage",
+        "url": "https://sitesbymax.com/",
+        "name": "Website Design for Service Businesses | Sites by Max",
+        "isPartOf": {"@id": "https://sitesbymax.com/#website"},
+        "about": {"@id": "https://sitesbymax.com/#business"}
+      }
+    ]
+  }
+  </script>
   <link rel="icon" href="assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
-    rel="stylesheet">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#161412">
+  <link rel="preload" as="image" href="assets/max.avif" type="image/avif" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- ============ INTRO QUIZ OVERLAY ============ -->
-  <div class="quiz" id="quiz" aria-modal="true" role="dialog" aria-label="Quick question before you browse">
+  <!-- ============ INTRO QUIZ WIDGET (non-blocking) ============ -->
+  <div class="quiz" id="quiz" role="dialog" aria-label="Quick question while you browse">
     <button class="quiz-back" id="quizBack" data-action="back" type="button" aria-label="Back to previous question"
       hidden>&larr; back</button>
-    <button class="quiz-skip" id="quizSkip" type="button">skip</button>
+    <button class="quiz-skip" id="quizSkip" type="button" aria-label="Dismiss this">skip &#10005;</button>
 
     <div class="quiz-stage" id="quizStage">
 
       <section class="quiz-step is-active" data-step="opener">
         <p class="quiz-kicker">quick question</p>
-        <h2 class="quiz-q">Want a website built for&nbsp;you?</h2>
+        <p class="quiz-q">Want a website built for&nbsp;you?</p>
         <div class="quiz-choices">
           <button class="choice choice-yes" type="button" data-action="yes">Yes</button>
           <button class="choice" type="button" data-action="no">No</button>
         </div>
       </section>
 
-      <section class="quiz-step" data-step="sure">
-        <p class="quiz-kicker">no pressure</p>
-        <h2 class="quiz-q">You sure? Previews are&nbsp;free.</h2>
-        <div class="quiz-choices">
-          <button class="choice choice-yes" type="button" data-action="relent">Okay, show me</button>
-          <button class="choice" type="button" data-action="still-no">Still no</button>
-        </div>
-      </section>
-
-      <section class="quiz-step" data-step="fair">
-        <h2 class="quiz-q">Fair enough. Here's the site&nbsp;anyway.</h2>
-      </section>
-
       <section class="quiz-step" data-step="name">
         <p class="quiz-kicker">1 of 5</p>
-        <h2 class="quiz-q">Nice. What's your name?</h2>
+        <p class="quiz-q">Nice. What's your name?</p>
         <div class="quiz-field">
           <input type="text" id="qName" autocomplete="name" placeholder="Your name" aria-label="Your name">
           <button class="choice choice-yes" type="button" data-action="next">Next</button>
@@ -59,7 +144,7 @@
 
       <section class="quiz-step" data-step="business">
         <p class="quiz-kicker">2 of 5</p>
-        <h2 class="quiz-q" id="qBusinessLabel">What kind of business do you run?</h2>
+        <p class="quiz-q" id="qBusinessLabel">What kind of business do you run?</p>
         <div class="quiz-field">
           <input type="text" id="qBusiness" placeholder="Pressure washing, landscaping, salon"
             aria-label="Type of business">
@@ -69,7 +154,7 @@
 
       <section class="quiz-step" data-step="phone">
         <p class="quiz-kicker">3 of 5</p>
-        <h2 class="quiz-q">Best phone number?</h2>
+        <p class="quiz-q">Best phone number?</p>
         <div class="quiz-field">
           <input type="tel" id="qPhone" autocomplete="tel" placeholder="(555) 555-5555" aria-label="Phone number">
           <button class="choice choice-yes" type="button" data-action="next">Next</button>
@@ -80,7 +165,7 @@
 
       <section class="quiz-step" data-step="notes">
         <p class="quiz-kicker">4 of 5</p>
-        <h2 class="quiz-q">Anything else I should know?</h2>
+        <p class="quiz-q">Anything else I should know?</p>
         <div class="quiz-field">
           <input type="text" id="qNotes" placeholder="Current site, what's not working" aria-label="Anything else">
           <button class="choice choice-yes" type="button" data-action="next">Next</button>
@@ -90,7 +175,7 @@
 
       <section class="quiz-step" data-step="email">
         <p class="quiz-kicker">5 of 5</p>
-        <h2 class="quiz-q">And your email?</h2>
+        <p class="quiz-q">And your email?</p>
         <div class="quiz-field">
           <input type="email" id="qEmail" autocomplete="email" placeholder="you@business.com"
             aria-label="Email address">
@@ -100,7 +185,7 @@
       </section>
 
       <section class="quiz-step" data-step="done">
-        <h2 class="quiz-q" id="qDoneLine">Talk soon.</h2>
+        <p class="quiz-q" id="qDoneLine">Talk soon.</p>
         <p class="quiz-sub">I'll reach out about your free preview. Here's my work in the&nbsp;meantime.</p>
       </section>
 
@@ -114,10 +199,10 @@
   <!-- ============ HEADER ============ -->
   <header class="top">
     <a class="wordmark" href="#top">
-      <img src="assets/logo.png" alt="" class="wordmark-glyph">
+      <img src="assets/logo.webp" alt="" class="wordmark-glyph" width="52" height="44">
       <span>Sites by Max</span>
     </a>
-    <nav class="top-links">
+    <nav class="top-links" id="topLinks">
       <a href="#work">work</a>
       <span class="sep">/</span>
       <a href="#how">how it works</a>
@@ -132,13 +217,19 @@
           <line x1="7" y1="17" x2="17" y2="7"></line>
           <polyline points="7 7 17 7 17 17"></polyline>
         </svg></span></a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="topLinks"
+      aria-label="Open menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
   </header>
 
   <main id="top">
 
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="hero-copy reveal">
+      <div class="hero-copy">
         <p class="eyebrow"><span class="brace">{</span> websites for service businesses, wherever you are <span
             class="brace">}</span></p>
         <h1>Hi, I'm Max. I build websites that get your business more&nbsp;calls.</h1>
@@ -149,8 +240,12 @@
           <a class="btn btn-line" href="#work">See my work</a>
         </div>
       </div>
-      <div class="hero-photo reveal">
-        <img src="assets/max.jpg" alt="Max on the Brooklyn Bridge">
+      <div class="hero-photo">
+        <picture>
+          <source srcset="assets/max.avif" type="image/avif">
+          <source srcset="assets/max.webp" type="image/webp">
+          <img src="assets/max.jpg" alt="Max on the Brooklyn Bridge" width="700" height="700" fetchpriority="high">
+        </picture>
         <span class="hero-photo-caption">this is me. the whole team.</span>
       </div>
     </section>
@@ -164,8 +259,12 @@
         <!-- To add a new site: copy this <a class="work-card"> block, swap the image, text, and href. -->
         <a class="work-card reveal" href="https://martinpropertycare.com" target="_blank" rel="noopener">
           <div class="work-shot">
-            <img src="assets/martin-preview.jpg" alt="Martin Property Care homepage"
-              onerror="this.parentElement.classList.add('is-fallback'); this.remove();">
+            <picture>
+              <source srcset="assets/martin-preview.avif" type="image/avif">
+              <source srcset="assets/martin-preview.webp" type="image/webp">
+              <img src="assets/martin-preview.jpg" alt="Martin Property Care homepage" width="1200" height="750"
+                loading="lazy">
+            </picture>
             <div class="work-shot-fallback" aria-hidden="true">
               <span class="fallback-dot"></span><span class="fallback-dot"></span><span class="fallback-dot"></span>
               <p>martinpropertycare.com</p>
@@ -175,14 +274,23 @@
             <h3>Martin Property Care</h3>
             <p>A veteran-owned pressure washing business in Bozeman, Montana, built on word of mouth and a reputation
               for showing up and doing the job right.</p>
+            <!-- TODO: PLACEHOLDER QUOTE. Replace with a real quote from Tyler before this ships. -->
+            <blockquote class="work-quote">
+              <p>"[Placeholder: real quote from Tyler goes here before launch.]"</p>
+              <cite>Tyler, Martin Property Care</cite>
+            </blockquote>
             <span class="work-link">Visit the live site</span>
           </div>
         </a>
 
         <a class="work-card reveal" href="https://johnsonboyspowerwashing.com/" target="_blank" rel="noopener">
           <div class="work-shot">
-            <img src="assets/johnson-preview.jpg" alt="Johnson Boys Power Washing homepage"
-              onerror="this.parentElement.classList.add('is-fallback'); this.remove();">
+            <picture>
+              <source srcset="assets/johnson-preview.avif" type="image/avif">
+              <source srcset="assets/johnson-preview.webp" type="image/webp">
+              <img src="assets/johnson-preview.jpg" alt="Johnson Boys Power Washing homepage" width="1200" height="750"
+                loading="lazy">
+            </picture>
             <div class="work-shot-fallback" aria-hidden="true">
               <span class="fallback-dot"></span><span class="fallback-dot"></span><span class="fallback-dot"></span>
               <p>johnsonboyspowerwashing.com</p>
@@ -192,6 +300,11 @@
             <h3>Johnson Boys Power Washing</h3>
             <p>A father-and-son pressure washing crew in Albuquerque and Rio Rancho, New Mexico, built around
               trash barrel cleaning, driveways, and patios done right.</p>
+            <!-- TODO: PLACEHOLDER QUOTE. Replace with a real quote from the Johnson Boys owner before this ships. -->
+            <blockquote class="work-quote">
+              <p>"[Placeholder: real quote from the Johnson Boys owner goes here before launch.]"</p>
+              <cite>Owner, Johnson Boys Power Washing</cite>
+            </blockquote>
             <span class="work-link">Visit the live site</span>
           </div>
         </a>
@@ -205,6 +318,9 @@
           </div>
         </div>
       </div>
+
+      <p class="work-vertical-link reveal">Run a pressure washing business? <a
+          href="/pressure-washing-websites">See how I build pressure washing sites</a></p>
     </section>
 
     <!-- ============ HOW IT WORKS ============ -->
@@ -228,6 +344,13 @@
             nothing.</p>
         </div>
       </div>
+
+      <div class="replace-note reveal">
+        <h3>Replacing an old site?</h3>
+        <p>Most sites I replace are years old, slow on phones, and hard to find on Google. Before: a site you're a
+          little embarrassed to send people to. After: a fast page that shows up for your service and your area, with
+          your number front and center. I handle the switch, and your old site stays up until the new one is ready.</p>
+      </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -235,13 +358,15 @@
       <p class="section-label"><span class="brace">{</span> about <span class="brace">}</span></p>
       <h2 class="reveal">One guy. No agency markup.</h2>
       <div class="about-copy reveal">
-        <p>I'm Max Lichter, a software engineer. By day I build enterprise software. On the side, I build websites for
-          people who actually answer their own phones.</p>
-        <p>Most service businesses get two options: pay an agency $5,000 and talk to an account manager, or fight with a
-          DIY builder that looks like one. I'm the third option, one person, one flat price, and you can text me
-          directly. My first client is in Bozeman, Montana. We've never met. The site works great.</p>
-        <p>I also run a popup bakery, so I've stood at a booth pitching my own thing to strangers. Your website should
-          do that pitching for you.</p>
+        <p>I'm Max Lichter, and Sites by Max is my one-person website design studio. By day I'm a software engineer
+          building enterprise software. On the side I design and build custom websites for service businesses:
+          pressure washing, landscaping, home services, and the trades. The model is simple. I build you a free
+          preview first. If you love it, you pay a flat $10.46 build fee and the site goes live. Hosting is pay what
+          you want, monthly, with no contract. Updates are a text message, done within a day. I keep a small client
+          list so every site gets my full attention. This is real client work, not a portfolio of mockups. I built
+          martinpropertycare.com for a veteran-owned pressure washing business in Bozeman, Montana, and
+          johnsonboyspowerwashing.com for a father-and-son crew in Albuquerque, New Mexico. No agency markup, no
+          account manager. You talk to the person who builds the site.</p>
         <a class="about-link" href="https://www.linkedin.com/in/iammaxlichter/" target="_blank" rel="noopener">See my
           credentials on LinkedIn</a>
       </div>
@@ -256,9 +381,11 @@
         <div class="price-block">
           <h3>The website</h3>
           <p class="price-figure">$10.46, one time</p>
-          <p>That's the whole thing: a custom site built around your business, your services, your photos, your reviews,
-             that looks good on every screen and turns visitors into calls. You see the preview first, so you know
-            exactly what you're paying for.</p>
+          <p class="price-why">Why $10.46? It's low on purpose. I'm early and building a reputation. The preview does
+            the selling, the price just makes it official.</p>
+          <p>That's the whole thing: custom web design built around your business, your services, your photos, your
+            reviews, that looks good on every screen and turns visitors into calls. You see the preview first, so you
+            know exactly what you're paying for.</p>
         </div>
         <div class="price-block">
           <h3>Hosting &amp; maintenance</h3>
@@ -270,6 +397,40 @@
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <p class="section-label"><span class="brace">{</span> questions <span class="brace">}</span></p>
+      <h2 class="reveal">Fair questions.</h2>
+
+      <div class="faq">
+        <div class="faq-item reveal">
+          <h3>How much does a website cost for a service business?</h3>
+          <p>With me, $10.46 to build, one time. Hosting after that is pay what you want. Agencies charge $3,000 to
+            $10,000 for the same web design work. I keep it low because I'm building my client list and my
+            reputation.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>What if I don't love the preview?</h3>
+          <p>Then you walk away and owe me nothing. The preview is free. No deposit, no awkward phone call. That's the
+            whole point.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>Do I need a contract?</h3>
+          <p>No. There's nothing to sign. You pay once for the build and the site is yours. If you ever want to leave,
+            take it with you.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>How does pay-what-you-want hosting work?</h3>
+          <p>I keep your site live, fast, and backed up every month. You pay whatever you think that's worth. Some
+            months that might be nothing. No contract, and updates are a text away.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>How long does it take?</h3>
+          <p>The free preview is usually ready within a week. Once you approve it, going live takes a day or two.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
       <div class="contact-copy">
@@ -277,6 +438,8 @@
         <h2 class="reveal">Get your preview.</h2>
         <p class="reveal">Tell me a little about your business and I'll get back to you, usually the same day. The
           preview is free either way.</p>
+        <p class="contact-email reveal">Prefer email? <a
+            href="mailto:iammaxlichter@gmail.com">iammaxlichter@gmail.com</a></p>
         <p class="contact-returning-note reveal" id="contactReturningNote" hidden>Got your details from the quick
           questions above, no need to fill this out again. I'll be in touch soon.</p>
       </div>
@@ -308,11 +471,13 @@
 
   <footer class="foot">
     <p>&copy; <span id="year"></span> Sites by Max</p>
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:iammaxlichter@gmail.com">iammaxlichter@gmail.com</a>
+    <a href="/privacy">Privacy Policy</a>
     <a href="#top">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 
 </html>

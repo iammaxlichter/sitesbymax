@@ -44,13 +44,10 @@ function showStep(id) {
   }
 }
 
-function dismissQuiz(scrollToWork = false) {
-  sessionStorage.setItem("sbm_quiz_done", "1");
+function dismissQuiz() {
+  localStorage.setItem("sbm_quiz_done", "1");
+  quiz.classList.remove("is-open");
   quiz.classList.add("is-dismissed");
-  document.body.classList.remove("quiz-open");
-  if (scrollToWork) {
-    setTimeout(() => document.getElementById("work").scrollIntoView({ behavior: "smooth" }), 350);
-  }
   setTimeout(() => quiz.remove(), 900);
 }
 
@@ -69,7 +66,7 @@ function revealReturningNote() {
 }
 
 function submitQuizLead() {
-  sessionStorage.setItem("sbm_quiz_lead", "1");
+  localStorage.setItem("sbm_quiz_lead", "1");
   revealReturningNote();
 
   const line = document.getElementById("qDoneLine");
@@ -93,7 +90,7 @@ function submitQuizLead() {
     /* the visitor still gets the site either way */
   });
 
-  setTimeout(() => dismissQuiz(true), 1100);
+  setTimeout(() => dismissQuiz(), 1400);
 }
 
 function advanceFrom(stepId) {
@@ -130,13 +127,27 @@ function advanceFrom(stepId) {
 }
 
 function initQuiz() {
-  if (sessionStorage.getItem("sbm_quiz_done")) {
+  if (localStorage.getItem("sbm_quiz_done")) {
     document.body.classList.add("quiz-done");
     quiz.remove();
     return;
   }
 
-  document.body.classList.add("quiz-open");
+  /* non-blocking: slide the widget in once the visitor scrolls, or after a pause */
+  let quizShown = false;
+  function showQuizWidget() {
+    if (quizShown || !document.body.contains(quiz)) return;
+    quizShown = true;
+    quiz.classList.add("is-open");
+  }
+  setTimeout(showQuizWidget, 6000);
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > 300) showQuizWidget();
+    },
+    { passive: true }
+  );
 
   quiz.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-action]");
@@ -146,12 +157,7 @@ function initQuiz() {
     const step = stepEl.dataset.step;
 
     if (action === "yes") showStep("name");
-    if (action === "no") showStep("sure");
-    if (action === "relent") dismissQuiz();
-    if (action === "still-no") {
-      showStep("fair");
-      setTimeout(() => dismissQuiz(), 1600);
-    }
+    if (action === "no") dismissQuiz();
     if (action === "back") {
       const prev = BACK_TARGETS[step];
       if (prev) showStep(prev);
@@ -179,13 +185,13 @@ function initQuiz() {
   document.getElementById("quizSkip").addEventListener("click", () => dismissQuiz());
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !quiz.classList.contains("is-dismissed")) dismissQuiz();
+    if (e.key === "Escape" && quiz.classList.contains("is-open")) dismissQuiz();
   });
 }
 
 initQuiz();
 
-if (sessionStorage.getItem("sbm_quiz_lead")) revealReturningNote();
+if (localStorage.getItem("sbm_quiz_lead")) revealReturningNote();
 
 /* ---------- contact form ---------- */
 
@@ -232,6 +238,18 @@ form.addEventListener("submit", async (e) => {
     btn.disabled = false;
     btn.textContent = "Send it over";
   }
+});
+
+/* ---------- work-card image fallbacks ---------- */
+
+document.querySelectorAll(".work-shot img").forEach((img) => {
+  const showFallback = () => {
+    const shot = img.closest(".work-shot");
+    if (shot) shot.classList.add("is-fallback");
+    (img.closest("picture") || img).remove();
+  };
+  if (img.complete && img.naturalWidth === 0) showFallback();
+  else img.addEventListener("error", showFallback, { once: true });
 });
 
 /* ---------- scroll reveals ---------- */

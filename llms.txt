@@ -1,0 +1,18 @@
+# Sites by Max
+
+> Freelance website design for service businesses (pressure washing,
+> landscaping, home services, trades). Custom, mobile-first sites with a flat
+> build fee and pay-what-you-want hosting. Built and run by Max Lichter,
+> remote, serving the United States.
+
+## Services
+- Website build for service businesses — flat $10.46 build fee
+- Website hosting — pay-what-you-want, monthly
+
+## Pages
+- [Home](https://sitesbymax.com/): what Sites by Max does, portfolio, pricing
+- [Pressure Washing Websites](https://sitesbymax.com/pressure-washing-websites): website design for pressure washing businesses, with real client examples
+- [Privacy](https://sitesbymax.com/privacy): privacy policy
+
+## Contact
+- Website: https://sitesbymax.com/
