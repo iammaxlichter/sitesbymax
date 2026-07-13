@@ -22,10 +22,21 @@ const BACK_TARGETS = {
 
 const backBtn = document.getElementById("quizBack");
 
+let quizOpener = null;
+
+function getFocusable(container) {
+  return Array.from(
+    container.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])')
+  ).filter((el) => !el.hidden && el.offsetParent !== null);
+}
+
 function showStep(id) {
   quiz.querySelectorAll(".quiz-step").forEach((s) => s.classList.remove("is-active"));
   const step = quiz.querySelector(`[data-step="${id}"]`);
   step.classList.add("is-active");
+
+  const heading = step.querySelector(".quiz-q");
+  if (heading) quiz.setAttribute("aria-labelledby", heading.id);
 
   backBtn.hidden = !(id in BACK_TARGETS);
 
@@ -48,6 +59,9 @@ function dismissQuiz() {
   localStorage.setItem("sbm_quiz_done", "1");
   quiz.classList.remove("is-open");
   quiz.classList.add("is-dismissed");
+  if (quizOpener && document.contains(quizOpener) && typeof quizOpener.focus === "function") {
+    quizOpener.focus();
+  }
   setTimeout(() => quiz.remove(), 900);
 }
 
@@ -138,7 +152,10 @@ function initQuiz() {
   function showQuizWidget() {
     if (quizShown || !document.body.contains(quiz)) return;
     quizShown = true;
+    quizOpener = document.activeElement;
     quiz.classList.add("is-open");
+    const first = getFocusable(quiz)[0];
+    if (first) setTimeout(() => first.focus(), 350);
   }
   setTimeout(showQuizWidget, 6000);
   window.addEventListener(
@@ -185,7 +202,31 @@ function initQuiz() {
   document.getElementById("quizSkip").addEventListener("click", () => dismissQuiz());
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && quiz.classList.contains("is-open")) dismissQuiz();
+    if (!quiz.classList.contains("is-open")) return;
+
+    if (e.key === "Escape") {
+      dismissQuiz();
+      return;
+    }
+
+    /* trap focus inside the dialog while it's open */
+    if (e.key === "Tab") {
+      const focusable = getFocusable(quiz);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (!quiz.contains(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 }
 
