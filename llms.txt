@@ -1,16 +1,22 @@
 # Sites by Max
 
-> Freelance website design for service businesses (pressure washing,
-> landscaping, home services, trades). Custom, mobile-first sites with a flat
-> build fee and pay-what-you-want hosting. Built and run by Max Lichter,
-> remote, serving the United States.
+> Freelance website design for small businesses of every kind: restaurants,
+> bakeries, landscapers, salons, nonprofits, pressure washing crews and more.
+> Custom, mobile-first sites with a free preview first, a flat build fee and
+> pay-what-you-want hosting. Built and run by Max Lichter, remote, serving the
+> United States.
 
 ## Services
-- Website build for service businesses — flat $10.46 build fee
+- Website build for small businesses — free preview first, then a flat $10.46 build fee
 - Website hosting — pay-what-you-want, monthly
 
+## Client work
+- Baker Bridge Rescue (dog rescue, Cleveland, Tennessee): https://baker-bridge-rescue.pages.dev/
+- Martin Property Care (pressure washing, Bozeman, Montana): https://martinpropertycare.com
+- Johnson Boys Power Washing (pressure washing, Albuquerque, New Mexico): https://johnsonboyspowerwashing.com/
+
 ## Pages
-- [Home](https://sitesbymax.com/): what Sites by Max does, portfolio, pricing
+- [Home](https://sitesbymax.com/): what Sites by Max does, who it's for, portfolio, pricing
 - [Pressure Washing Websites](https://sitesbymax.com/pressure-washing-websites): website design for pressure washing businesses, with real client examples
 - [Privacy](https://sitesbymax.com/privacy): privacy policy
 
